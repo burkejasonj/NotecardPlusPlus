@@ -32,9 +32,9 @@ struct ClassCreatorView: View {
                     }
                     TextField("Year",
                               text: $classYearInt.value,
-                              prompt: Text("Class Number")
+                              prompt: Text("Class Year")
                     )
-                    .keyboardType(.decimalPad)
+                    .keyboardType(.numberPad)
                     .focused($focusState, equals: "year")
                 }
             }
