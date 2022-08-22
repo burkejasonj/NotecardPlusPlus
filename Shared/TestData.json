@@ -1,0 +1,176 @@
+{
+    "type":"SCHOOL",
+    "__ALLTYPES__":"SCHOOL,TEACHER,CREATOR,CLASS",
+    "uuid":"fd538bd1-77d0-4d70-9175-decb38af2e96",
+    "name":"Bakersfield Christian High School",
+    "teachers":[
+        {
+            "type":"TEACHER",
+            "uuid":"6f4fc735-9783-4f28-b686-8c663e7a9d9b",
+            "name":"Mrs. Cintron",
+            "classes":[
+                {
+                    "type":"CLASS",
+                    "uuid":"0e2fd10c-2941-43a3-8645-473215a1209c",
+                    "name":"American Sign Language 2",
+                    "level":"College Prep",
+                    "year":"2022",
+                    "color":"3AC759",
+                    "order":0,
+                    "creator":{
+                        "type":"CREATOR",
+                        "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+                        "name":"Jason Burke"
+                    }
+                }
+            ]
+        },
+        {
+            "type":"TEACHER",
+            "uuid":"7e53fc9e-0956-49a3-a8ab-4c46af09c3f8",
+            "name":"Ms. Bell",
+            "classes":[
+                {
+                    "type":"CLASS",
+                    "uuid":"0d466196-8739-43dd-87d2-066f85ef4c52",
+                    "name":"AP World History: Modern",
+                    "level":"Advanced Placement",
+                    "year":"2022",
+                    "color":"AF52DE",
+                    "order":1,
+                    "creator":{
+                        "type":"CREATOR",
+                        "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+                        "name":"Jason Burke"
+                    }
+                }
+            ]
+        },
+        {
+            "type":"TEACHER",
+            "uuid":"d8eedfe3-64a3-4e28-904d-d934719e794f",
+            "name":"Mrs. Hamann",
+            "classes":[
+                {
+                    "type":"CLASS",
+                    "uuid":"7f49d7ec-481c-421d-b0dc-c2b778524247",
+                    "name":"Advanced Band",
+                    "level":"Elective",
+                    "year":"2022",
+                    "color":"007AFF",
+                    "order":2,
+                    "creator":{
+                        "type":"CREATOR",
+                        "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+                        "name":"Jason Burke"
+                    }
+                }
+            ]
+        },
+        {
+            "type":"TEACHER",
+            "uuid":"10c05399-50aa-4198-844f-c587823b99e4",
+            "name":"Mr. Anspach",
+            "classes":[
+                {
+                    "type":"CLASS",
+                    "uuid":"99c66b2c-5d9a-4de7-94a4-f027e00e9f44",
+                    "name":"Bible as Literature",
+                    "level":"College Prep",
+                    "year":"2022",
+                    "color":"A2845E",
+                    "order":3,
+                    "creator":{
+                        "type":"CREATOR",
+                        "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+                        "name":"Jason Burke"
+                    }
+                }
+            ]
+        },
+        {
+            "type":"TEACHER",
+            "uuid":"3bae91d0-e195-4763-852b-bfaad187bf35",
+            "name":"Mrs. Garza",
+            "classes":[
+                {
+                    "type":"CLASS",
+                    "uuid":"ceb6bf7a-bdeb-4df4-a203-32880ecfb963",
+                    "name":"Introduction to World Literature & Composition",
+                    "level":"College Prep",
+                    "year":"2022",
+                    "color":"FFCC00",
+                    "order":4,
+                    "creator":{
+                        "type":"CREATOR",
+                        "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+                        "name":"Jason Burke"
+                    }
+                }
+            ]
+        },
+        {
+            "type":"TEACHER",
+            "uuid":"dabd3fa0-9b10-4edb-9128-764df45f01f9",
+            "name":"Ms. Janzen",
+            "classes":[
+                {
+                    "type":"CLASS",
+                    "uuid":"a98cfa05-d595-402f-8b9b-2ae5b6774033",
+                    "name":"Algebra 2",
+                    "level":"Honors",
+                    "year":"2022",
+                    "color":"5856D6",
+                    "order":5,
+                    "creator":{
+                        "type":"CREATOR",
+                        "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+                        "name":"Jason Burke"
+                    }
+                }
+            ]
+        },
+        {
+            "type":"TEACHER",
+            "uuid":"25d2714e-d07a-4af2-bad1-5a0a72ecf11f",
+            "name":"Mr. Hamann",
+            "classes":[
+                {
+                    "type":"CLASS",
+                    "uuid":"6ba7657f-631b-48e8-a2d5-5ae857cc129a",
+                    "name":"Chemistry",
+                    "level":"Honors",
+                    "year":"2022",
+                    "color":"30B0C7",
+                    "order":6,
+                    "creator":{
+                        "type":"CREATOR",
+                        "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+                        "name":"Jason Burke"
+                    }
+                }
+            ]
+        },
+        {
+            "type":"TEACHER",
+            "uuid":"9f8b4b99-a1af-4a50-88b7-161d38c18b44",
+            "name":"Mr. Smith",
+            "classes":[
+                {
+                    "type":"CLASS",
+                    "uuid":"8ae957d1-4f86-4e32-8bbc-85a7d2c37b57",
+                    "name":"Robotics",
+                    "level":"Elective",
+                    "year":"2022",
+                    "color":"FF9500",
+                    "order":7,
+                    "creator":{
+                        "type":"CREATOR",
+                        "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+                        "name":"Jason Burke"
+                    }
+                }
+            ]
+        },
+    ]
+}
