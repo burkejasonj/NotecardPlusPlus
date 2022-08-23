@@ -14,6 +14,7 @@
 		8B3030EB28B21C08005B42E8 /* ClassImporterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */; };
 		8B3030ED28B21D38005B42E8 /* ViewNotFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */; };
 		8B35FB8928A852D100D019B5 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B164EB028A4CEE8009764AC /* TestData.json */; };
+		8BB0FC3828B56582007CC3DE /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB0FC3728B5657C007CC3DE /* StudyView.swift */; };
 		8BCD676A28627A0A00AE131F /* NotecardPlusPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */; };
 		8BCD676C28627A0A00AE131F /* NotecardPlusPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */; };
 		8BCD677028627A0A00AE131F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675B28627A0800AE131F /* Persistence.swift */; };
@@ -33,6 +34,7 @@
 		8B3030E828B21770005B42E8 /* ClassCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCreatorView.swift; sourceTree = "<group>"; };
 		8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassImporterView.swift; sourceTree = "<group>"; };
 		8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotFound.swift; sourceTree = "<group>"; };
+		8BB0FC3728B5657C007CC3DE /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		8BCD675828627A0800AE131F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotecardPlusPlusApp.swift; sourceTree = "<group>"; };
 		8BCD675B28627A0800AE131F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -74,15 +76,16 @@
 				8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */,
 				8BD9ACBC2898FDD700011938 /* BookHeroView.swift */,
 				8BD9ACC02898FE4200011938 /* ChartExampleView.swift */,
+				8B3030E828B21770005B42E8 /* ClassCreatorView.swift */,
 				8BD9ACBA2898FD9C00011938 /* ClassDetailView.swift */,
+				8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */,
 				8B234544289667C90081D8FE /* ClassRowView.swift */,
 				8B234541289662730081D8FE /* ContentView.swift */,
-				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
-				8B3030E828B21770005B42E8 /* ClassCreatorView.swift */,
-				8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */,
 				8BF4A69828628180004A01E5 /* Extensions.swift */,
 				8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */,
 				8BCD675B28627A0800AE131F /* Persistence.swift */,
+				8BB0FC3728B5657C007CC3DE /* StudyView.swift */,
+				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
 				8BCD675C28627A0A00AE131F /* Assets.xcassets */,
 				8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */,
 			);
@@ -194,6 +197,7 @@
 				8B3030EB28B21C08005B42E8 /* ClassImporterView.swift in Sources */,
 				8BCD676A28627A0A00AE131F /* NotecardPlusPlus.xcdatamodeld in Sources */,
 				8BD9ACC12898FE4200011938 /* ChartExampleView.swift in Sources */,
+				8BB0FC3828B56582007CC3DE /* StudyView.swift in Sources */,
 				8B234542289662730081D8FE /* ContentView.swift in Sources */,
 				8B2345472896680A0081D8FE /* BookCoverView.swift in Sources */,
 				8BCD677028627A0A00AE131F /* Persistence.swift in Sources */,
@@ -330,7 +334,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "NotecardPlusPlus (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 3BP7BN4643;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -367,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "NotecardPlusPlus (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 3BP7BN4643;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

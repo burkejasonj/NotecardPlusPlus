@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Notecard++.png",
+      "filename" : "Notecard++2.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -52,13 +52,13 @@
       "size" : "512x512"
     },
     {
-      "filename" : "Notecard++ 1.png",
+      "filename" : "Notecard++2 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
     },
     {
-      "filename" : "Notecard++ 2.png",
+      "filename" : "Notecard++2 2.png",
       "idiom" : "universal",
       "platform" : "watchos",
       "size" : "1024x1024"
