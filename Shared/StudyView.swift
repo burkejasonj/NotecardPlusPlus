@@ -1,129 +1,65 @@
-//
-//  StudyView.swift
-//  NotecardPlusPlus
-//
-//  Created by Jason Burke on 8/23/22.
-//
-
 import SwiftUI
 
 struct StudyView: View {
+    @State var question: String
+    @State var type: String
+    @State var answer: String
+    
+    @State var correctAnswers: Int
+    
+    init(
+        question: String,
+        type: String,
+        answer: String,
+        correctAnswers: Int
+    ) {
+        self.question = question
+        self.type = type
+        self.answer = answer
+        self.correctAnswers = correctAnswers
+    }
+    
+    init(
+        question: String,
+        type: String,
+        answer: String
+    ) {
+        self.question = question
+        self.type = type
+        self.answer = answer
+        self.correctAnswers = 1
+    }
+    
+    init() {
+        self.question = "This is a test question."
+        self.type = "MULTICHOICE"
+        self.answer = "answer1,answer2,answer3,answer4,answer5,answer6"
+        self.correctAnswers = 1
+    }
+    
     var body: some View {
         VStack {
-            Text("Question")
-            Text("AnswerBox")
-            HStack {
-                Button {
-                    
-                } label: {
-                    Text("True")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                }
-                Button {
-                    
-                } label: {
-                    Text("False")
-                        .frame(maxWidth: .infinity)
-                        .padding()
+            Text("\(question)")
+            Text("There \(correctAnswers == 1 ? "is" : "are") \(correctAnswers) correct \(correctAnswers == 1 ? "answer" : "answers").")
+            LazyVGrid(columns: [.init(.adaptive(minimum: 150))]) {
+                ForEach(
+                    answer.components(separatedBy: ","),
+                    id: \.self
+                ) { possibleAnswer in
+                    Button {
+                        
+                    } label: {
+                        Text("\(possibleAnswer)")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                    }
                 }
             }
-            .frame(maxWidth: 200)
-            .buttonStyle(.borderedProminent)
+            .padding()
+            .buttonStyle(.bordered)
         }
     }
 }
-
-//struct StudyView: View {
-//    @Environment(\.managedObjectContext) private var viewContext
-//
-//    @FetchRequest(
-//        entity: Question.entity(),
-//        sortDescriptors: [],
-//        animation: .default
-//    )
-//    private var questions: FetchedResults<Question>
-//
-//    @State private var answer: String = ""
-//
-//    @State private var matchesAnswer: Bool?
-//
-//    private var currentQuestion: Question {
-//        questions.first!
-//    }
-//
-//    var possibleAnswers: [String]
-//    var correctAnswer: String
-//
-//    let accentColor: Color
-//
-//    var body: some View {
-//        Group {
-//            Text(
-//                currentQuestion.uuid?.uuidString ?? "No UUID Provided"
-//            )
-//            Text(
-//                currentQuestion.type ?? "No Type Provided"
-//            )
-//            Text(
-//                currentQuestion.question ?? "No Questions Provided"
-//            )
-//            Text(
-//                currentQuestion.answer ?? "No Answers Provided"
-//            )
-//        }
-//        if (currentQuestion.type == "MULTICHOICE") {
-//            Group {
-//                ForEach(possibleAnswers, id: \.self) { thisAnswer in
-//                    Button {
-//                        answer = thisAnswer
-//                        if (answer.lowercased() == correctAnswer.lowercased()) {
-//                            matchesAnswer = true
-//                        } else {
-//                            matchesAnswer = false
-//                        }
-//                    } label: {
-//                        Text("\(thisAnswer)")
-//                            .padding()
-//                    }
-//                    .buttonStyle(.borderedProminent)
-//                    .tint(matchesAnswer == nil ?
-//                          accentColor.opacity(0.5) :
-//                            thisAnswer.lowercased() == correctAnswer.lowercased() ?
-//                          Color.green :
-//                            Color.red)
-//                }
-//            }
-//        }
-//        if (currentQuestion.type == "SHORTANSWER") {
-//            Group {
-//                TextField(
-//                    "Answer",
-//                    text: $answer,
-//                    prompt: Text("Answer")
-//                )
-//                .textFieldStyle(.roundedBorder)
-//
-//                Button {
-//                    if (answer.lowercased() == correctAnswer.lowercased()) {
-//                        matchesAnswer = true
-//                    } else {
-//                        matchesAnswer = false
-//                    }
-//                } label: {
-//                    Text("Submit")
-//                        .padding()
-//                }
-//                .buttonStyle(.borderedProminent)
-//                .tint(matchesAnswer == nil ?
-//                      accentColor.opacity(0.5) :
-//                        matchesAnswer == true ?
-//                      Color.green :
-//                        Color.red)
-//            }
-//        }
-//    }
-//}
 
 struct StudyView_Previews: PreviewProvider {
     static var previews: some View {
