@@ -4,29 +4,6 @@ struct BookHeroView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(
-        entity: Question.entity(),
-        sortDescriptors: [],
-        animation: .default
-    )
-    private var questions: FetchedResults<Question>
-    
-    @State private var answer: String = ""
-    
-    @State private var matchesAnswer: Bool?
-    
-    private var currentQuestion: Question {
-        questions.first!
-    }
-    
-    private var possibleAnswers: [String] {
-        currentQuestion.answer!.components(separatedBy: ",").shuffled()
-    }
-    
-    private var correctAnswer: String {
-        currentQuestion.answer!.components(separatedBy: ",").first!
-    }
-    
     let accentColor: Color
     let size: CGFloat
     let gradient: Gradient
@@ -39,11 +16,7 @@ struct BookHeroView: View {
                 gradient: gradient
             )
             NavigationLink() {
-                StudyView(
-                    possibleAnswers: possibleAnswers,
-                    correctAnswer: correctAnswer,
-                    accentColor: accentColor
-                )
+                StudyView()
             } label: {
                 Text("Study")
                     .padding()
