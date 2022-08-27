@@ -16,7 +16,13 @@ struct BookHeroView: View {
                 gradient: gradient
             )
             NavigationLink() {
-                StudyView()
+                StudyView(
+                    question: "This is a test question.",
+                    type: "MULTICHOICE",
+                    answers: "answer1,answer2,answer3,answer4,answer5,answer6",
+                    correctAnswers: 1,
+                    accentColor: accentColor
+                )
             } label: {
                 Text("Study")
                     .padding()
