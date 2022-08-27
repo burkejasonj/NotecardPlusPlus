@@ -34,10 +34,6 @@ struct ContentView: View {
                             ClassDetailView(classInfo: thisClass)
                     ) {
                         ClassRowView(classInfo: thisClass)
-                            .padding(.vertical, userInterfaceIdiom == .mac
-                                     ? nil
-                                     : 0
-                            )
                     }
                 }
                 .onMove(perform: moveItem)
