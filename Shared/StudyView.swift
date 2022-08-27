@@ -1,40 +1,56 @@
 import SwiftUI
 
 struct StudyView: View {
+    var questionList: [Question]? = nil
+    
     @State var question: String
     @State var type: String
-    @State var answer: String
     
     @State var correctAnswers: Int
+    @State var listedAnswers: [String]
+    @State var listedCorrectAnswers: [String]
     
-    init(
-        question: String,
-        type: String,
-        answer: String,
-        correctAnswers: Int
-    ) {
-        self.question = question
-        self.type = type
-        self.answer = answer
-        self.correctAnswers = correctAnswers
+    @State var questionIndex: Int?
+    
+    @State var showCorrectAnswers: Bool = false
+    
+    var accentColor: Color
+    
+    init(questionList: [Question], accentColor: Color = .accentColor) {
+        self.questionList = questionList
+        self.question = questionList.first?.question ?? "Error: QuestionList empty"
+        self.type = questionList.first?.type ?? "Error: QuestionList empty"
+        self.correctAnswers = Int(questionList.first?.correctAnswers ?? 1)
+        self.listedAnswers = questionList.first?.answer?.components(separatedBy: ",").shuffled() ?? [""]
+        self.listedCorrectAnswers = Array(questionList.first?.answer?.components(separatedBy: ",")[0...Int((questionList.first?.correctAnswers ?? 1) - 1)] ?? [""])
+        self.questionIndex = 0
+        self.accentColor = accentColor
     }
     
     init(
         question: String,
         type: String,
-        answer: String
+        answers: String,
+        correctAnswers: Int = 1,
+        accentColor: Color = .accentColor
     ) {
         self.question = question
         self.type = type
-        self.answer = answer
-        self.correctAnswers = 1
+        self.correctAnswers = correctAnswers
+        self.listedAnswers = answers.components(separatedBy: ",").shuffled()
+        self.listedCorrectAnswers = Array(answers.components(separatedBy: ",")[0...correctAnswers - 1])
+        self.questionIndex = nil
+        self.accentColor = accentColor
     }
     
     init() {
         self.question = "This is a test question."
         self.type = "MULTICHOICE"
-        self.answer = "answer1,answer2,answer3,answer4,answer5,answer6"
         self.correctAnswers = 1
+        self.listedAnswers = "answer1,answer2,answer3,answer4,answer5,answer6".components(separatedBy: ",").shuffled()
+        self.listedCorrectAnswers = Array("answer1,answer2,answer3,answer4,answer5,answer6".components(separatedBy: ",")[0...0])
+        self.questionIndex = nil
+        self.accentColor = .accentColor
     }
     
     var body: some View {
@@ -43,20 +59,26 @@ struct StudyView: View {
             Text("There \(correctAnswers == 1 ? "is" : "are") \(correctAnswers) correct \(correctAnswers == 1 ? "answer" : "answers").")
             LazyVGrid(columns: [.init(.adaptive(minimum: 150))]) {
                 ForEach(
-                    answer.components(separatedBy: ","),
+                    listedAnswers,
                     id: \.self
                 ) { possibleAnswer in
                     Button {
-                        
+                        showCorrectAnswers = true
                     } label: {
                         Text("\(possibleAnswer)")
                             .frame(maxWidth: .infinity)
                             .padding()
                     }
+                    .tint(showCorrectAnswers == true ? (listedCorrectAnswers.firstIndex(of: possibleAnswer) == nil ? .red : .green) : accentColor)
                 }
             }
             .padding()
-            .buttonStyle(.bordered)
+            .ifCondition(showCorrectAnswers == true) { button in
+                button.buttonStyle(.borderedProminent)
+            } else: { button in
+                button.buttonStyle(.bordered)
+            }
+
         }
     }
 }
