@@ -74,6 +74,7 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .menuStyle(.borderlessButton)
                 }
             }
             .sheet(item: $showSheet) { sheet in
