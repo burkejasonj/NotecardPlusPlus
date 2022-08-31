@@ -15,6 +15,7 @@ struct BookHeroView: View {
                 scale: size / 100,
                 gradient: gradient
             )
+
             NavigationLink() {
                 StudyView(
                     question: "This is a test question.",
@@ -25,12 +26,14 @@ struct BookHeroView: View {
                 )
             } label: {
                 Text("Study")
-                    .padding()
-                    .frame(width: size * 0.75)
-                    .foregroundColor(Color.init(UIColor.white))
-                    .background(accentColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
             }
+            .buttonStyle(
+                ncButtonStyle(
+                    foregroundColor: .white,
+                    tint: accentColor,
+                    size: size
+                )
+            )
         }
         .frame(width: size * 0.75)
     }

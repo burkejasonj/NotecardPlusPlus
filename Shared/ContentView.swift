@@ -24,6 +24,8 @@ struct ContentView: View {
     private let userInterfaceIdiom = UIDevice.current.userInterfaceIdiom
     
     @State private var showSheet: ActiveSheet? = nil
+    
+    @State private var selection = UUID()
 
     var body: some View {
         NavigationView {
@@ -39,6 +41,7 @@ struct ContentView: View {
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
             }
+//            .accentColor(.init(UIColor.tertiarySystemBackground))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {

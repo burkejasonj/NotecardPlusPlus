@@ -1,5 +1,22 @@
 import SwiftUI
 
+struct ncButtonStyle: ButtonStyle {
+    var foregroundColor: Color
+    var tint: Color
+    var size: CGFloat
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding()
+            .frame(width: size * 0.75)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .foregroundColor(tint)
+            )
+    }
+}
+
+
 class NumberInput: ObservableObject {
     @Published var value = "" {
         didSet {
@@ -19,7 +36,12 @@ struct AdaptiveStack<Content: View>: View {
     let spacing: CGFloat?
     let content: () -> Content
     
-    init(horizontalAlignment: HorizontalAlignment = .center, verticalAlignment: VerticalAlignment = .center, spacing: CGFloat? = nil, @ViewBuilder content: @escaping () -> Content) {
+    init(
+        horizontalAlignment: HorizontalAlignment = .center,
+        verticalAlignment: VerticalAlignment = .center,
+        spacing: CGFloat? = nil,
+        @ViewBuilder content: @escaping () -> Content
+    ) {
         self.horizontalAlignment = horizontalAlignment
         self.verticalAlignment = verticalAlignment
         self.spacing = spacing
