@@ -1,0 +1,2 @@
+# NotecardPlusPlus
+Studying made simple.
