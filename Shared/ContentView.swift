@@ -51,6 +51,9 @@ struct ContentView: View {
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Menu {
                         Button {
                             showSheet = .classCreator
