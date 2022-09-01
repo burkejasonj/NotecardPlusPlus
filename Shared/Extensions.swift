@@ -7,11 +7,14 @@ struct ncButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
+            .foregroundColor(foregroundColor)
             .padding()
             .frame(width: size * 0.75)
             .background(
                 RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(configuration.isPressed ? foregroundColor : tint)
+                    .foregroundColor(
+                        configuration.isPressed ? foregroundColor : tint
+                    )
             )
     }
 }
@@ -51,9 +54,17 @@ struct AdaptiveStack<Content: View>: View {
     var body: some View {
         Group {
             if sizeClass == .compact {
-                VStack(alignment: horizontalAlignment, spacing: spacing, content: content)
+                VStack(
+                    alignment: horizontalAlignment,
+                    spacing: spacing,
+                    content: content
+                )
             } else {
-                HStack(alignment: verticalAlignment, spacing: spacing, content: content)
+                HStack(
+                    alignment: verticalAlignment,
+                    spacing: spacing,
+                    content: content
+                )
             }
         }
     }
@@ -61,7 +72,11 @@ struct AdaptiveStack<Content: View>: View {
 
 extension View {
     @ViewBuilder
-    func ifCondition<TrueContent: View, FalseContent: View>(_ condition: Bool, then trueContent: (Self) -> TrueContent, else falseContent: (Self) -> FalseContent) -> some View {
+    func ifCondition<TrueContent: View, FalseContent: View>(
+        _ condition: Bool,
+        then trueContent: (Self) -> TrueContent,
+        else falseContent: (Self) -> FalseContent
+    ) -> some View {
         if condition {
             trueContent(self)
         } else {
@@ -84,7 +99,9 @@ extension Color {
         
         let length = hexSanitized.count
         
-        guard Scanner(string: hexSanitized).scanHexInt64(&rgb) else { return nil }
+        guard Scanner(string: hexSanitized).scanHexInt64(&rgb) else {
+            return nil
+        }
         
         if length == 6 {
             r = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
@@ -106,7 +123,8 @@ extension Color {
     
     func toHex() -> String? {
         let uic = UIColor(self)
-        guard let components = uic.cgColor.components, components.count >= 3 else {
+        guard let components = uic.cgColor.components,
+                components.count >= 3 else {
             return nil
         }
         let r = Float(components[0])
@@ -119,9 +137,20 @@ extension Color {
         }
         
         if a != Float(1.0) {
-            return String(format: "%02lX%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255), lroundf(a * 255))
+            return String(
+                format: "%02lX%02lX%02lX%02lX",
+                lroundf(r * 255),
+                lroundf(g * 255),
+                lroundf(b * 255),
+                lroundf(a * 255)
+            )
         } else {
-            return String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
+            return String(
+                format: "%02lX%02lX%02lX",
+                lroundf(r * 255),
+                lroundf(g * 255),
+                lroundf(b * 255)
+            )
         }
     }
 }
@@ -146,12 +175,21 @@ struct UIList<Data, Row: View>: UIViewRepresentable {
             self.content = content
         }
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(
+            _ tableView: UITableView,
+            numberOfRowsInSection section: Int
+        ) -> Int {
             data.count
         }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? HostingCell<Row> else {
+        func tableView(
+            _ tableView: UITableView,
+            cellForRowAt indexPath: IndexPath
+        ) -> UITableViewCell {
+            guard let tableViewCell = tableView.dequeueReusableCell(
+                withIdentifier: "Cell",
+                for: indexPath
+            ) as? HostingCell<Row> else {
                 return UITableViewCell()
             }
             let data = self.data[indexPath.row]
@@ -177,7 +215,10 @@ struct UIList<Data, Row: View>: UIViewRepresentable {
         tableView.separatorStyle = .none
         tableView.delegate = context.coordinator
         tableView.dataSource = context.coordinator
-        tableView.register(HostingCell<Row>.self, forCellReuseIdentifier: "Cell")
+        tableView.register(
+            HostingCell<Row>.self,
+            forCellReuseIdentifier: "Cell"
+        )
         return tableView
     }
 }
@@ -194,10 +235,18 @@ private class HostingCell<Content: View>: UITableViewCell {
             content.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview(content)
             
-            content.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-            content.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
-            content.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-            content.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+            content.topAnchor.constraint(
+                equalTo: contentView.topAnchor
+            ).isActive = true
+            content.leftAnchor.constraint(
+                equalTo: contentView.leftAnchor
+            ).isActive = true
+            content.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor
+            ).isActive = true
+            content.rightAnchor.constraint(
+                equalTo: contentView.rightAnchor
+            ).isActive = true
         } else {
             host?.rootView = view
         }
