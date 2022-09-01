@@ -67,13 +67,6 @@ struct ContentView: View {
                         } label: {
                             Text("Import Class")
                         }
-                        
-//                        Button {
-//                            showSheetType = ""
-//                            showSheet.toggle()
-//                        } label: {
-//                            Text("Test 404")
-//                        }
                     } label: {
                         Image(systemName: "plus")
                     }
