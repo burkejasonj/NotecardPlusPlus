@@ -34,6 +34,9 @@
 		8B3030E828B21770005B42E8 /* ClassCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCreatorView.swift; sourceTree = "<group>"; };
 		8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassImporterView.swift; sourceTree = "<group>"; };
 		8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotFound.swift; sourceTree = "<group>"; };
+		8B79A8D328C074820053F7FA /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		8B79A8D428C074820053F7FA /* macOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = macOS; sourceTree = "<group>"; };
+		8B79A8D528C074820053F7FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8BB0FC3728B5657C007CC3DE /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		8BCD675828627A0800AE131F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotecardPlusPlusApp.swift; sourceTree = "<group>"; };
@@ -62,8 +65,11 @@
 		8BCD675128627A0800AE131F = {
 			isa = PBXGroup;
 			children = (
-				8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */,
+				8B79A8D328C074820053F7FA /* LICENSE.md */,
+				8B79A8D528C074820053F7FA /* README.md */,
 				8BCD675628627A0800AE131F /* Shared */,
+				8B79A8D428C074820053F7FA /* macOS */,
+				8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */,
 				8BCD676228627A0A00AE131F /* Products */,
 			);
 			sourceTree = "<group>";
