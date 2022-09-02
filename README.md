@@ -20,7 +20,12 @@ See [Releases](https://github.com/burkejasonj/NotecardPlusPlus/releases)
 
 git clone https://github.com/burkejasonj/NotecardPlusPlus.git
 cd NotecardPlusPlus
+
+# If using Xcode
 open NotecardPlusPlus.xcodeproj
+
+# If using Xcode-beta
+# open -a Xcode-beta NotecardPlusPlus.xcodeproj
 ```
 
 ## Usage
