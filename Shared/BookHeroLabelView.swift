@@ -1,8 +1,7 @@
-import SwiftUI
 import Foundation
+import SwiftUI
 
 struct BookHeroLabelView: View {
-
     var title: String
     var level: String
     var teacher: String

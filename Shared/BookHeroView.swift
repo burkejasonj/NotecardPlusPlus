@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct BookHeroView: View {
-
     @Environment(\.managedObjectContext) private var viewContext
-    
+
     let accentColor: Color
     let size: CGFloat
     let gradient: Gradient
@@ -16,7 +15,7 @@ struct BookHeroView: View {
                 gradient: gradient
             )
 
-            NavigationLink() {
+            NavigationLink {
                 StudyView(
                     question: "This is a test question.",
                     type: "MULTICHOICE",
@@ -48,8 +47,7 @@ struct BookHeroView_Previews: PreviewProvider {
         )
         .environment(
             \.managedObjectContext,
-             PersistenceController.preview.container.viewContext
+            PersistenceController.preview.container.viewContext
         )
     }
 }
-

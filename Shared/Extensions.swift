@@ -18,7 +18,6 @@ struct ncButtonStyle: ButtonStyle {
     }
 }
 
-
 class NumberInput: ObservableObject {
     @Published var value = "" {
         didSet {
@@ -123,7 +122,8 @@ extension Color {
     func toHex() -> String? {
         let uic = UIColor(self)
         guard let components = uic.cgColor.components,
-                components.count >= 3 else {
+              components.count >= 3
+        else {
             return nil
         }
         let r = Float(components[0])
@@ -155,7 +155,6 @@ extension Color {
 }
 
 struct UIList<Data, Row: View>: UIViewRepresentable {
-    
     private let content: (Data) -> Row
     private let data: [Data]
     
@@ -165,7 +164,6 @@ struct UIList<Data, Row: View>: UIViewRepresentable {
     }
     
     class Coordinator: NSObject, UITableViewDataSource, UITableViewDelegate {
-        
         private let content: (Data) -> Row
         var data: [Data]
         

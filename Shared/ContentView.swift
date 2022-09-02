@@ -1,10 +1,10 @@
-import SwiftUI
-import Foundation
 import CoreData
+import Foundation
+import SwiftUI
 
 enum ActiveSheet: Identifiable {
     case classCreator, classImporter
-    
+
     var id: Int {
         hashValue
     }
@@ -16,15 +16,15 @@ struct ContentView: View {
     @FetchRequest(
         entity: Class.entity(),
         sortDescriptors:
-            [NSSortDescriptor(keyPath: \Class.order, ascending: true)],
+        [NSSortDescriptor(keyPath: \Class.order, ascending: true)],
         animation: .default
     )
     private var classes: FetchedResults<Class>
 
     private let userInterfaceIdiom = UIDevice.current.userInterfaceIdiom
-    
+
     @State private var showSheet: ActiveSheet? = nil
-    
+
     @State private var selection = UUID()
 
     var body: some View {
@@ -32,17 +32,19 @@ struct ContentView: View {
             List {
                 ForEach(Array(classes)) { thisClass in
                     NavigationLink(
-                        destination:
-                            ClassDetailView(classInfo: thisClass)
+                        destination: ClassDetailView(classInfo: thisClass)
                     ) {
                         ClassRowView(classInfo: thisClass)
-                            .padding(.vertical, userInterfaceIdiom == .mac ? 8 : 0)
+                            .padding(
+                                .vertical,
+                                userInterfaceIdiom == .mac ? 8 : 0
+                            )
                     }
                 }
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
             }
-//            .accentColor(.init(UIColor.tertiarySystemBackground))
+            .accentColor(.init(UIColor.secondarySystemFill))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
@@ -61,8 +63,7 @@ struct ContentView: View {
                         } label: {
                             Text("Create Class")
                         }
-                        
-                        
+
                         Button {
                             showSheet = .classImporter
                         } label: {
@@ -81,7 +82,6 @@ struct ContentView: View {
                 case .classImporter:
                     ClassImporterView()
                 }
-        
             }
             .navigationTitle("Classes")
 
@@ -89,7 +89,6 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .foregroundColor(Color(UIColor.secondaryLabel))
                 .navigationTitle("Details")
-
         }
         .ifCondition(userInterfaceIdiom != .phone, then: { nv in
             nv.navigationViewStyle(.columns)
@@ -117,13 +116,13 @@ struct ContentView: View {
             print(error.localizedDescription)
         }
     }
-    
+
     private func deleteItem(at offset: IndexSet) {
         withAnimation {
             offset.map { i in
                 classes[i]
             }.forEach(viewContext.delete)
-            
+
             do {
                 try viewContext.save()
             } catch {
@@ -138,9 +137,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .environment(
                 \.managedObjectContext,
-                 PersistenceController.preview.container.viewContext
+                PersistenceController.preview.container.viewContext
             )
     }
 }
-
-

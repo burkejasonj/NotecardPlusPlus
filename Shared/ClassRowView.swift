@@ -23,7 +23,6 @@ struct ClassRowView: View {
         self.creator = "Unknown Provider"
         
         self.gradient = Gradient(colors: [accentColor, Color.clear])
-        
     }
     
     init(classInfo: Class?) {
@@ -37,7 +36,6 @@ struct ClassRowView: View {
         self.creator = classInfo?.creator?.name ?? "Unknown Provider"
         
         self.gradient = Gradient(colors: [accentColor, Color.clear])
-        
     }
     
     init(accentColor: Color?, title: String, level: String) {
