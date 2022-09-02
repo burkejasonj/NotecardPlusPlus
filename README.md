@@ -6,7 +6,9 @@ NotecardPlusPlus is a study tool designed to help students study for and underst
 
 ### Requirements
 Compilation: Requires macOS 12.5.1 or later and Xcode 13.4.1 or later.
+
 Desktop App: Requires macOS 12.5.1 or later.
+
 Mobile App: Requires iOS/iPadOS 15.5.1 or later.
 
 ### Builds
