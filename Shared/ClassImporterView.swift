@@ -1,13 +1,12 @@
 import SwiftUI
 
 struct ClassImporterView: View {
-    
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         NavigationView {
             Text("ClassImporterView")
-                .toolbar() {
+                .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
                             dismiss()

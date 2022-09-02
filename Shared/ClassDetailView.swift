@@ -1,5 +1,5 @@
-import SwiftUI
 import Foundation
+import SwiftUI
 
 struct ClassDetailView: View {
     var accentColor: Color
@@ -52,7 +52,8 @@ struct ClassDetailView: View {
                             accentColor: accentColor,
                             size: min(
                                 geo.size.height - 144.3,
-                                geo.size.width),
+                                geo.size.width
+                            ),
                             gradient: gradient
                         )
                         BookHeroLabelView(
@@ -66,7 +67,8 @@ struct ClassDetailView: View {
                     }
                     .frame(width: min(
                         geo.size.height - 144.3,
-                        geo.size.width) * 0.75)
+                        geo.size.width
+                    ) * 0.75)
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
             } else {
@@ -111,6 +113,7 @@ struct ClassDetailView_Previews: PreviewProvider {
             level: "Honors",
             teacher: "Unknown Instructor",
             creator: "Notecard++",
-            school: "BCHS")
+            school: "BCHS"
+        )
     }
 }

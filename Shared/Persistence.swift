@@ -14,10 +14,20 @@ struct PersistenceController {
         if defaults.bool(forKey: "isPreloaded") == false {
             defaults.set(true, forKey: "isPreloaded")
             
-            let path = Bundle.main.path(forResource: "TestData", ofType: "json") // file path for file "data.txt"
-            let inputString = try? String(contentsOfFile: path!, encoding: String.Encoding.utf8)
+            let path = Bundle.main.path(
+                forResource: "TestData",
+                ofType: "json"
+            ) // file path for file "data.txt"
+            let inputString = try? String(
+                contentsOfFile: path!,
+                encoding: String.Encoding.utf8
+            )
             
-            let json = try? JSONSerialization.jsonObject(with: Data(inputString?.utf8 ?? "{}".utf8), options: [])
+            let json = try? JSONSerialization
+                .jsonObject(
+                    with: Data(inputString?.utf8 ?? "{}".utf8),
+                    options: []
+                )
             
             if let importedData = json as? [String: Any] {
                 let type = importedData["type"] as? String
@@ -39,7 +49,9 @@ struct PersistenceController {
                             let newTeacher = Teacher(context: viewContext)
                             
                             newTeacher.name = name ?? "Unknown Instructor"
-                            newTeacher.uuid = UUID(uuidString: uuid ?? UUID().uuidString)
+                            newTeacher.uuid = UUID(
+                                uuidString: uuid ?? UUID().uuidString
+                            )
                             newTeacher.school = newSchool
                             
                             if let classes = teacher["classes"] as? [Any] {
@@ -69,7 +81,7 @@ struct PersistenceController {
                                             let uuid = creator["uuid"] as? String
                                             let name = creator["name"] as? String
                                             
-                                            let id: UUID = UUID(uuidString: uuid ?? "") ?? UUID()
+                                            let id = UUID(uuidString: uuid ?? "") ?? UUID()
                                             
                                             let request = Creator.fetchRequest() as NSFetchRequest<Creator>
                                             request.predicate = NSPredicate(format: "%K == %@", "uuid", id as CVarArg)
@@ -111,7 +123,6 @@ struct PersistenceController {
             }
         }
         
-        
         return result
     }()
 
@@ -120,9 +131,11 @@ struct PersistenceController {
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "NotecardPlusPlus")
         if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+            container.persistentStoreDescriptions.first!.url = URL(
+                fileURLWithPath: "/dev/null"
+            )
         }
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.

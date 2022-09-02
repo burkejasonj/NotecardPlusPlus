@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct BookCoverView: View {
-
     let accentColor: Color
     let scale: CGFloat
     let gradient: Gradient

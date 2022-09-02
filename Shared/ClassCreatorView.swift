@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct ClassCreatorView: View {
-    
     @Environment(\.dismiss) var dismiss
     
     @State var classNameString = ""
@@ -20,26 +19,23 @@ struct ClassCreatorView: View {
                     Section("ATTRIBUTES") {
                         TextField("Name",
                                   text: $classNameString,
-                                  prompt: Text("Class Name")
-                        )
-                        .focused($focusState, equals: "name")
-                        .onSubmit {
-                            focusState = "level"
-                        }
+                                  prompt: Text("Class Name"))
+                            .focused($focusState, equals: "name")
+                            .onSubmit {
+                                focusState = "level"
+                            }
                         TextField("Level",
                                   text: $classLevelString,
-                                  prompt: Text("Class Level")
-                        )
-                        .focused($focusState, equals: "level")
-                        .onSubmit {
-                            focusState = "year"
-                        }
+                                  prompt: Text("Class Level"))
+                            .focused($focusState, equals: "level")
+                            .onSubmit {
+                                focusState = "year"
+                            }
                         TextField("Year",
                                   text: $classYearInt.value,
-                                  prompt: Text("Class Year")
-                        )
-                        .keyboardType(.numberPad)
-                        .focused($focusState, equals: "year")
+                                  prompt: Text("Class Year"))
+                            .keyboardType(.numberPad)
+                            .focused($focusState, equals: "year")
                         ColorPicker(selection: $classColor, supportsOpacity: false) {
                             Text("Class Color")
                         }
@@ -55,38 +51,38 @@ struct ClassCreatorView: View {
                     }
                 }
             }
-                .toolbar() {
-                    ToolbarItem(placement: .cancellationAction) {
-                        Button {
-                            dismiss()
-                        } label: {
-                            Text("Cancel")
-                        }
-                    }
-                    ToolbarItem(placement: .confirmationAction) {
-                        Button {
-                            let thisClass = Class(context: viewContext)
-                            
-                            thisClass.name = classNameString
-                            thisClass.level = classLevelString
-                            thisClass.color = classColor.toHex()
-                            thisClass.uuid = UUID()
-                            thisClass.year = Int64(classYearInt.value) ?? 2022
-                            thisClass.order = 0
-                            
-                            do {
-                                try viewContext.save()
-                            } catch {
-                                print("error")
-                            }
-                            
-                            dismiss()
-                        } label: {
-                            Text("Create")
-                        }
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Cancel")
                     }
                 }
-                .navigationTitle("Create Class")
+                ToolbarItem(placement: .confirmationAction) {
+                    Button {
+                        let thisClass = Class(context: viewContext)
+                            
+                        thisClass.name = classNameString
+                        thisClass.level = classLevelString
+                        thisClass.color = classColor.toHex()
+                        thisClass.uuid = UUID()
+                        thisClass.year = Int64(classYearInt.value) ?? 2022
+                        thisClass.order = 0
+                            
+                        do {
+                            try viewContext.save()
+                        } catch {
+                            print("error")
+                        }
+                            
+                        dismiss()
+                    } label: {
+                        Text("Create")
+                    }
+                }
+            }
+            .navigationTitle("Create Class")
         }
     }
 }

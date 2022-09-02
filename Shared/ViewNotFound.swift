@@ -1,13 +1,12 @@
 import SwiftUI
 
 struct ViewNotFound: View {
-    
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         NavigationView {
             Text("I can't find the view you're looking for.")
-                .toolbar() {
+                .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
                             dismiss()

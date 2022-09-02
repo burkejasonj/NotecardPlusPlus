@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct StudyView: View {
-    var questionList: [Question]? = nil
+    var questionList: [Question]?
     
     @State var question: String
     @State var type: String
@@ -47,8 +47,13 @@ struct StudyView: View {
         self.question = "This is a test question."
         self.type = "MULTICHOICE"
         self.correctAnswers = 1
-        self.listedAnswers = "answer1,answer2,answer3,answer4,answer5,answer6".components(separatedBy: ",").shuffled()
-        self.listedCorrectAnswers = Array("answer1,answer2,answer3,answer4,answer5,answer6".components(separatedBy: ",")[0...0])
+        self.listedAnswers = "answer1,answer2,answer3,answer4,answer5,answer6"
+            .components(separatedBy: ",")
+            .shuffled()
+        self.listedCorrectAnswers = Array(
+            "answer1,answer2,answer3,answer4,answer5,answer6"
+                .components(separatedBy: ",")[0...0]
+        )
         self.questionIndex = nil
         self.accentColor = .accentColor
     }
@@ -69,7 +74,14 @@ struct StudyView: View {
                             .frame(maxWidth: .infinity)
                             .padding()
                     }
-                    .tint(showCorrectAnswers == true ? (listedCorrectAnswers.firstIndex(of: possibleAnswer) == nil ? .red : .green) : accentColor)
+                    .tint(
+                        showCorrectAnswers == true ?
+                            (listedCorrectAnswers
+                                .firstIndex(of: possibleAnswer) == nil ?
+                                .red :
+                                .green
+                            ) : accentColor
+                    )
                 }
             }
             .padding()
@@ -78,7 +90,6 @@ struct StudyView: View {
             } else: { button in
                 button.buttonStyle(.bordered)
             }
-
         }
     }
 }
@@ -88,7 +99,7 @@ struct StudyView_Previews: PreviewProvider {
         StudyView()
             .environment(
                 \.managedObjectContext,
-                 PersistenceController.preview.container.viewContext
+                PersistenceController.preview.container.viewContext
             )
     }
 }

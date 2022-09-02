@@ -9,7 +9,7 @@ struct NotecardPlusPlusApp: App {
             ContentView()
                 .environment(
                     \.managedObjectContext,
-                     persistenceController.container.viewContext
+                    persistenceController.container.viewContext
                 )
         }
     }
