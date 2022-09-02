@@ -24,9 +24,9 @@ git clone https://github.com/burkejasonj/NotecardPlusPlus.git
 cd NotecardPlusPlus
 
 # If using Xcode
-open NotecardPlusPlus.xcodeproj
+open -a Xcode NotecardPlusPlus.xcodeproj
 
-# If using Xcode-beta
+# If using Xcode Beta
 # open -a Xcode-beta NotecardPlusPlus.xcodeproj
 ```
 
