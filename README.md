@@ -18,7 +18,7 @@ See [Releases](https://github.com/burkejasonj/NotecardPlusPlus/releases)
 
 git clone https://github.com/burkejasonj/NotecardPlusPlus.git
 cd NotecardPlusPlus
-# Insert Xcode run command here
+open NotecardPlusPlus.xcodeproj
 ```
 
 ## Usage
