@@ -118,5 +118,14 @@ func ExchangeV2parseClassItem(
     print("object has order \(order ?? -1)")
     print("object has teacher \(teacher ?? "UNKNOWN")")
     print("object has creator \(creator ?? "UNKNOWN")")
+    
+    let newClass = Class(context: viewContext)
+    
+    newClass.name = name ?? "Unknown Class"
+    newClass.level = level ?? ""
+    newClass.color = color ?? "5856D6"
+    newClass.uuid = UUID(uuidString: uuid ?? UUID().uuidString)
+    newClass.year = Int64(year ?? "0") ?? 0
+    newClass.order = order ?? 0
 }
 
