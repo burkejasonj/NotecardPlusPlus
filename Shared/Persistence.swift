@@ -12,7 +12,7 @@ struct PersistenceControllerV2 {
         
         // Preload start
         if defaults.bool(forKey: "isPreloaded") == false {
-            // defaults.set(true, forKey: "isPreloaded")
+             defaults.set(true, forKey: "isPreloaded")
             
             let path = Bundle.main.path(
                 forResource: "TestDataV2",
