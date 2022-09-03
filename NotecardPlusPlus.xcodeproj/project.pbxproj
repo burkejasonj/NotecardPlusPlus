@@ -23,6 +23,7 @@
 		8BD9ACBD2898FDD700011938 /* BookHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBC2898FDD700011938 /* BookHeroView.swift */; };
 		8BD9ACBF2898FE0900011938 /* BookHeroLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */; };
 		8BD9ACC12898FE4200011938 /* ChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACC02898FE4200011938 /* ChartExampleView.swift */; };
+		8BDD642D28C2949100BA038B /* TestDataV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BDD642C28C2949100BA038B /* TestDataV2.json */; };
 		8BF4A69928628180004A01E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4A69828628180004A01E5 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		8BD9ACBC2898FDD700011938 /* BookHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeroView.swift; sourceTree = "<group>"; };
 		8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeroLabelView.swift; sourceTree = "<group>"; };
 		8BD9ACC02898FE4200011938 /* ChartExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartExampleView.swift; sourceTree = "<group>"; };
+		8BDD642C28C2949100BA038B /* TestDataV2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestDataV2.json; sourceTree = "<group>"; };
 		8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NotecardPlusPlus (iOS).entitlements"; sourceTree = "<group>"; };
 		8BF4A69828628180004A01E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				8B164EB028A4CEE8009764AC /* TestData.json */,
+				8BDD642C28C2949100BA038B /* TestDataV2.json */,
 				8B2345462896680A0081D8FE /* BookCoverView.swift */,
 				8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */,
 				8BD9ACBC2898FDD700011938 /* BookHeroView.swift */,
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B35FB8928A852D100D019B5 /* TestData.json in Resources */,
+				8BDD642D28C2949100BA038B /* TestDataV2.json in Resources */,
 				8BCD677228627A0A00AE131F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
