@@ -154,42 +154,42 @@
             "creator": "f0f173fb-db0b-4ad9-a8f0-5d18f9784620"
         },
         {
-            "type":"TEACHER",
-            "uuid":"25d2714e-d07a-4af2-bad1-5a0a72ecf11f",
-            "name":"Mr. Hamann",
+            "type": "TEACHER",
+            "uuid": "25d2714e-d07a-4af2-bad1-5a0a72ecf11f",
+            "name": "Mr. Hamann",
             "school": "fd538bd1-77d0-4d70-9175-decb38af2e96",
             "classes": [
                 "6ba7657f-631b-48e8-a2d5-5ae857cc129a"
             ]
         },
         {
-            "type":"CLASS",
-            "uuid":"6ba7657f-631b-48e8-a2d5-5ae857cc129a",
-            "name":"Chemistry",
-            "level":"Honors",
-            "year":"2022",
-            "color":"30B0C7",
-            "order":6,
+            "type": "CLASS",
+            "uuid": "6ba7657f-631b-48e8-a2d5-5ae857cc129a",
+            "name": "Chemistry",
+            "level": "Honors",
+            "year": "2022",
+            "color": "30B0C7",
+            "order": 6,
             "teacher": "25d2714e-d07a-4af2-bad1-5a0a72ecf11f",
             "creator": "f0f173fb-db0b-4ad9-a8f0-5d18f9784620"
         },
         {
-            "type":"TEACHER",
-            "uuid":"9f8b4b99-a1af-4a50-88b7-161d38c18b44",
-            "name":"Mr. Smith",
+            "type": "TEACHER",
+            "uuid": "9f8b4b99-a1af-4a50-88b7-161d38c18b44",
+            "name": "Mr. Smith",
             "school": "fd538bd1-77d0-4d70-9175-decb38af2e96",
             "classes": [
                 "8ae957d1-4f86-4e32-8bbc-85a7d2c37b57"
             ]
         },
         {
-            "type":"CLASS",
-            "uuid":"8ae957d1-4f86-4e32-8bbc-85a7d2c37b57",
-            "name":"Robotics",
-            "level":"Elective",
-            "year":"2022",
-            "color":"FF9500",
-            "order":7,
+            "type": "CLASS",
+            "uuid": "8ae957d1-4f86-4e32-8bbc-85a7d2c37b57",
+            "name": "Robotics",
+            "level": "Elective",
+            "year": "2022",
+            "color": "FF9500",
+            "order": 7,
             "teacher": "9f8b4b99-a1af-4a50-88b7-161d38c18b44",
             "creator": "f0f173fb-db0b-4ad9-a8f0-5d18f9784620"
         }
