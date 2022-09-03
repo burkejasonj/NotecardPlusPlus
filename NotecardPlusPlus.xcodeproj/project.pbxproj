@@ -92,6 +92,7 @@
 				8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */,
 				8B234544289667C90081D8FE /* ClassRowView.swift */,
 				8B234541289662730081D8FE /* ContentView.swift */,
+				8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */,
 				8BF4A69828628180004A01E5 /* Extensions.swift */,
 				8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */,
 				8BCD675B28627A0800AE131F /* Persistence.swift */,
@@ -99,7 +100,6 @@
 				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
 				8BCD675C28627A0A00AE131F /* Assets.xcassets */,
 				8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */,
-				8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
