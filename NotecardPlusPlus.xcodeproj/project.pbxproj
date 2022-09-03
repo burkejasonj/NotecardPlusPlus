@@ -24,6 +24,7 @@
 		8BD9ACBF2898FE0900011938 /* BookHeroLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */; };
 		8BD9ACC12898FE4200011938 /* ChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACC02898FE4200011938 /* ChartExampleView.swift */; };
 		8BDD642D28C2949100BA038B /* TestDataV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BDD642C28C2949100BA038B /* TestDataV2.json */; };
+		8BDD642F28C2D2B900BA038B /* ExchangeV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */; };
 		8BF4A69928628180004A01E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4A69828628180004A01E5 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeroLabelView.swift; sourceTree = "<group>"; };
 		8BD9ACC02898FE4200011938 /* ChartExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartExampleView.swift; sourceTree = "<group>"; };
 		8BDD642C28C2949100BA038B /* TestDataV2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestDataV2.json; sourceTree = "<group>"; };
+		8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeV2.swift; sourceTree = "<group>"; };
 		8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NotecardPlusPlus (iOS).entitlements"; sourceTree = "<group>"; };
 		8BF4A69828628180004A01E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
 				8BCD675C28627A0A00AE131F /* Assets.xcassets */,
 				8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */,
+				8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				8BD9ACC12898FE4200011938 /* ChartExampleView.swift in Sources */,
 				8BB0FC3828B56582007CC3DE /* StudyView.swift in Sources */,
 				8B234542289662730081D8FE /* ContentView.swift in Sources */,
+				8BDD642F28C2D2B900BA038B /* ExchangeV2.swift in Sources */,
 				8B2345472896680A0081D8FE /* BookCoverView.swift in Sources */,
 				8BCD677028627A0A00AE131F /* Persistence.swift in Sources */,
 				8B234545289667C90081D8FE /* ClassRowView.swift in Sources */,

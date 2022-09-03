@@ -49,8 +49,29 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         UserDefaults.standard.set(false, forKey: "isPreloaded")
+                        
+                        let path = Bundle.main.path(
+                            forResource: "TestDataV2",
+                            ofType: "json"
+                        )
+                        
+                        let inputString = try? String(
+                            contentsOfFile: path!,
+                            encoding: String.Encoding.utf8
+                        )
+                        
+                        let json = try? JSONSerialization
+                            .jsonObject(
+                                with: Data(inputString?.utf8 ?? "{}".utf8),
+                                options: []
+                            )
+                        
+                        ExchangeV2import(
+                            file: json,
+                            viewContext: viewContext
+                        )
                     } label: {
-                        Text("Preload Data")
+                        Text("Load Data")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {

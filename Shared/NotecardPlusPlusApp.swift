@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct NotecardPlusPlusApp: App {
-    let persistenceController = PersistenceController.preview
+    let persistenceController = PersistenceControllerV2.preview
 
     var body: some Scene {
         WindowGroup {
