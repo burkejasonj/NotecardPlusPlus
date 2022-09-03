@@ -15,9 +15,33 @@ func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
                     let type = item["type"] as? String
                     let uuid = item["uuid"] as? String
                     
-                    print("found item of type \(type ?? "UNKNOWN") with uuid \(uuid ?? "UNKNOWN")")
+                    switch type {
+                    case "SCHOOL":
+                        ExchangeV2parseSchoolItem(item, viewContext)
+                    default:
+                        print("unable to handle item \(uuid ?? "UNKNOWN")")
+                    }
                 }
             }
         }
     }
+}
+
+func ExchangeV2parseSchoolItem(
+    _ item: [String: Any],
+    _ viewContext: NSManagedObjectContext
+) {
+    let type = item["type"] as? String
+    let uuid = item["uuid"] as? String
+    let name = item["name"] as? String
+    let teachers = item["teachers"] as? [String]
+    
+    print("parse object of type \(type ?? "UNKNOWN") with uuid \(uuid ?? "UNKNOWN")")
+    print("object has name \(name ?? "UNKNOWN")")
+    print("object contains the following teachers \(teachers ?? ["UNKNOWN"])")
+    
+    let newSchool = School(context: viewContext)
+    
+    newSchool.name = name ?? "Unknown School"
+    newSchool.uuid = UUID(uuidString: uuid ?? UUID().uuidString)
 }
