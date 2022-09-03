@@ -10,32 +10,31 @@ struct PersistenceControllerV2 {
         
         let defaults = UserDefaults.standard
         
-        // TODO: MOVE TO FIRST RUN ONLY
-        let path = Bundle.main.path(
-            forResource: "TestDataV2",
-            ofType: "json"
-        )
-
-        let inputString = try? String(
-            contentsOfFile: path!,
-            encoding: String.Encoding.utf8
-        )
-        
-        let json = try? JSONSerialization
-            .jsonObject(
-                with: Data(inputString?.utf8 ?? "{}".utf8),
-                options: []
-            )
-        
-        // ExchangeV2 Import
-        ExchangeV2import(
-            file: json,
-            viewContext: viewContext
-        )
-        
         // Preload start
         if defaults.bool(forKey: "isPreloaded") == false {
             // defaults.set(true, forKey: "isPreloaded")
+            
+            let path = Bundle.main.path(
+                forResource: "TestDataV2",
+                ofType: "json"
+            )
+            
+            let inputString = try? String(
+                contentsOfFile: path!,
+                encoding: String.Encoding.utf8
+            )
+            
+            let json = try? JSONSerialization
+                .jsonObject(
+                    with: Data(inputString?.utf8 ?? "{}".utf8),
+                    options: []
+                )
+            
+            // ExchangeV2 Import
+            ExchangeV2import(
+                file: json,
+                viewContext: viewContext
+            )
             
             do {
                 try viewContext.save()
