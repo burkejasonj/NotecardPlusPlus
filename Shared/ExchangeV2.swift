@@ -71,3 +71,24 @@ func ExchangeV2parseTeacherItem(
     )
 }
 
+func ExchangeV2parseCreatorItem(
+    _ item: [String: Any],
+    _ viewContext: NSManagedObjectContext
+) {
+    let type = item["type"] as? String
+    let uuid = item["uuid"] as? String
+    let name = item["name"] as? String
+    let classes = item["classes"] as? [String]
+    
+    print("parse object of type \(type ?? "UNKNOWN") with uuid \(uuid ?? "UNKNOWN")")
+    print("object has name \(name ?? "UNKNOWN")")
+    print("object contains the following classes \(classes ?? ["UNKNOWN"])")
+    
+    let newCreator = Creator(context: viewContext)
+    
+    newCreator.name = name ?? "Unknown Instructor"
+    newCreator.uuid = UUID(
+        uuidString: uuid ?? UUID().uuidString
+    )
+}
+
