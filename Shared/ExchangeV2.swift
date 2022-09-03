@@ -20,6 +20,8 @@ func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
                         ExchangeV2parseSchoolItem(item, viewContext)
                     case "TEACHER":
                         ExchangeV2parseTeacherItem(item, viewContext)
+                    case "CREATOR":
+                        ExchangeV2parseCreatorItem(item, viewContext)
                     default:
                         print("unable to handle item \(uuid ?? "UNKNOWN")")
                     }
