@@ -22,6 +22,8 @@ func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
                         ExchangeV2parseTeacherItem(item, viewContext)
                     case "CREATOR":
                         ExchangeV2parseCreatorItem(item, viewContext)
+                    case "CLASS":
+                        ExchangeV2parseClassItem(item, viewContext)
                     default:
                         print("unable to handle item \(uuid ?? "UNKNOWN")")
                     }
@@ -92,5 +94,29 @@ func ExchangeV2parseCreatorItem(
     newCreator.uuid = UUID(
         uuidString: uuid ?? UUID().uuidString
     )
+}
+
+func ExchangeV2parseClassItem(
+    _ item: [String: Any],
+    _ viewContext: NSManagedObjectContext
+) {
+    let type = item["type"] as? String
+    let uuid = item["uuid"] as? String
+    let name = item["name"] as? String
+    let level = item["level"] as? String
+    let year = item["year"] as? String
+    let color = item["color"] as? String
+    let order = item["order"] as? Int64
+    let teacher = item["teacher"] as? String
+    let creator = item["creator"] as? String
+    
+    print("parse object of type \(type ?? "UNKNOWN") with uuid \(uuid ?? "UNKNOWN")")
+    print("object has name \(name ?? "UNKNOWN")")
+    print("object has level \(level ?? "UNKNOWN")")
+    print("object has year \(year ?? "UNKNOWN")")
+    print("object has color \(color ?? "UNKNOWN")")
+    print("object has order \(order ?? -1)")
+    print("object has teacher \(teacher ?? "UNKNOWN")")
+    print("object has creator \(creator ?? "UNKNOWN")")
 }
 
