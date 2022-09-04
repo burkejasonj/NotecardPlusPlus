@@ -4,9 +4,9 @@
     "date-created": "2022.08.02",
     "content": [
         {
-          "type":"CREATOR",
-          "uuid":"f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
-          "name":"Jason Burke",
+          "type": "CREATOR",
+          "uuid": "f0f173fb-db0b-4ad9-a8f0-5d18f9784620",
+          "name": "Jason Burke",
           "classes": [
               "0e2fd10c-2941-43a3-8645-473215a1209c",
               "0d466196-8739-43dd-87d2-066f85ef4c52",
