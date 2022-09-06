@@ -9,6 +9,8 @@ func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
         print("version \(version ?? -1)")
         print("content-type \(contentType ?? "unknown")")
         
+        // PASS 1: Import Attributes
+        
         if let content = file["content"] as? [Any] {
             for i in content {
                 if let item = i as? [String: Any] {
@@ -17,13 +19,13 @@ func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
                     
                     switch type {
                     case "SCHOOL":
-                        ExchangeV2parseSchoolItem(item, viewContext)
+                        ExchangeV2parseSchoolAttributes(item, viewContext)
                     case "TEACHER":
-                        ExchangeV2parseTeacherItem(item, viewContext)
+                        ExchangeV2parseTeacherAttributes(item, viewContext)
                     case "CREATOR":
-                        ExchangeV2parseCreatorItem(item, viewContext)
+                        ExchangeV2parseCreatorAttributes(item, viewContext)
                     case "CLASS":
-                        ExchangeV2parseClassItem(item, viewContext)
+                        ExchangeV2parseClassAttributes(item, viewContext)
                     default:
                         print("unable to handle item \(uuid ?? "UNKNOWN")")
                     }
@@ -33,7 +35,7 @@ func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
     }
 }
 
-func ExchangeV2parseSchoolItem(
+func ExchangeV2parseSchoolAttributes(
     _ item: [String: Any],
     _ viewContext: NSManagedObjectContext
 ) {
@@ -52,7 +54,7 @@ func ExchangeV2parseSchoolItem(
     newSchool.uuid = UUID(uuidString: uuid ?? UUID().uuidString)
 }
 
-func ExchangeV2parseTeacherItem(
+func ExchangeV2parseTeacherAttributes(
     _ item: [String: Any],
     _ viewContext: NSManagedObjectContext
 ) {
@@ -75,7 +77,7 @@ func ExchangeV2parseTeacherItem(
     )
 }
 
-func ExchangeV2parseCreatorItem(
+func ExchangeV2parseCreatorAttributes(
     _ item: [String: Any],
     _ viewContext: NSManagedObjectContext
 ) {
@@ -96,7 +98,7 @@ func ExchangeV2parseCreatorItem(
     )
 }
 
-func ExchangeV2parseClassItem(
+func ExchangeV2parseClassAttributes(
     _ item: [String: Any],
     _ viewContext: NSManagedObjectContext
 ) {
