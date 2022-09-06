@@ -46,6 +46,13 @@ struct ContentView: View {
             }
             .accentColor(.init(UIColor.secondarySystemFill))
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        UserDefaults.standard.set(false, forKey: "isPreloaded")
+                    } label: {
+                        Text("Fix All")
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
