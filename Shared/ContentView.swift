@@ -50,7 +50,7 @@ struct ContentView: View {
                     Button {
                         UserDefaults.standard.set(false, forKey: "isPreloaded")
                     } label: {
-                        Text("Preload Data")
+                        Text("Fix All")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
