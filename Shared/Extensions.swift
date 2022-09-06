@@ -13,8 +13,8 @@ struct ncButtonStyle: ButtonStyle {
             .background(
                 RoundedRectangle(cornerRadius: 8)
                     .foregroundColor(tint)
+                    .opacity(configuration.isPressed == true ? 0.4 : 1.0)
             )
-            .opacity(configuration.isPressed == true ? 0.4 : 1.0)
     }
 }
 
