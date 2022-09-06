@@ -32,13 +32,6 @@ func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
                 }
             }
             
-//            do {
-//                try viewContext.save()
-//            } catch {
-//                let nsError = error as NSError
-//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-            
             // PASS 2: Relationships
             
             for i in content {
@@ -49,8 +42,8 @@ func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
                     switch type {
 //                    case "SCHOOL":
 //                        ExchangeV2parseSchoolRelationships(item, viewContext)
-//                    case "TEACHER":
-//                        ExchangeV2parseTeacherRelationships(item, viewContext)
+                    case "TEACHER":
+                        ExchangeV2parseTeacherRelationships(item, viewContext)
 //                    case "CREATOR":
 //                        ExchangeV2parseCreatorRelationships(item, viewContext)
                     case "CLASS":
@@ -83,44 +76,6 @@ func ExchangeV2parseSchoolAttributes(
     newSchool.name = name ?? "Unknown School"
     newSchool.uuid = UUID(uuidString: uuid ?? UUID().uuidString)
 }
-
-//func ExchangeV2parseSchoolRelationships (
-//    _ item: [String: Any],
-//    _ viewContext: NSManagedObjectContext
-//) {
-//    let type = item["type"] as? String
-//    let uuid = item["uuid"] as? String
-//    let name = item["name"] as? String
-//    let teachers = item["teachers"] as? [String]
-//
-//    print("parse object of type \(type ?? "UNKNOWN") with uuid \(uuid ?? "UNKNOWN")")
-//    print("object has name \(name ?? "UNKNOWN")")
-//    print("object contains the following teachers \(teachers ?? ["UNKNOWN"])")
-//
-//    let schoolRequest = School.fetchRequest() as NSFetchRequest<School>
-//    schoolRequest.predicate = NSPredicate(format: "uuid == %@", argumentArray: [UUID(uuidString: uuid ?? "") ?? UUID()])
-//    let school = try? viewContext.fetch(schoolRequest)
-//
-//    let teachersRequest = Teacher.fetchRequest() as NSFetchRequest<Teacher>
-//    teachersRequest.predicate = NSPredicate(
-//        format: "uuid == %@",
-//        argumentArray: teachers
-//    )
-//    let importedTeachers = try? viewContext.fetch(teachersRequest)
-//
-//    // TODO: REMOVE DEBUG
-//    if school!.isEmpty {
-//        fatalError("PASS 1 FAILED: MISSING SCHOOL UUID \(uuid ?? "UNKNOWN")")
-//    }
-//    if importedTeachers!.isEmpty {
-//        fatalError("PASS 1 FAILED: MISSING TEACHER UUID \(uuid ?? "UNKNOWN")")
-//    }
-//
-//    for teacher in importedTeachers!
-//    {
-//        teacher.school = school!.first!
-//    }
-//}
 
 func ExchangeV2parseTeacherAttributes(
     _ item: [String: Any],
@@ -294,8 +249,6 @@ func ExchangeV2parseClassRelationships(
         let thisClass = try viewContext.fetch(thisClassFetchRequest)
         let classTeacher = try viewContext.fetch(classTeacherFetchRequest)
         let classCreator = try viewContext.fetch(classCreatorFetchRequest)
-
-        let newCreator = Creator(context: viewContext)
 
         thisClass.first!.teacher = classTeacher.first!
         thisClass.first!.creator = classCreator.first!
