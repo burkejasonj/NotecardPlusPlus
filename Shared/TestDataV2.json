@@ -154,6 +154,36 @@
             "creator": "f0f173fb-db0b-4ad9-a8f0-5d18f9784620"
         },
         {
+            "type": "LESSON",
+            "uuid": "",
+            "name": "Solving Systems of Equations in Three Variables",
+            "friendlyid": "1.9",
+            "classes": [
+                "a98cfa05-d595-402f-8b9b-2ae5b6774033"
+            ],
+            "questionGroups": [
+                ""
+            ]
+        },
+        {
+            "type": "QUESTIONGROUP",
+            "uuid": "",
+            "name": "Solving Systems of Equations in Three Variables",
+            "friendlyid": "1.9",
+            "lesson": "",
+            "questions": [
+                ""
+            ]
+        },
+        {
+            "type": "QUESTION",
+            "uuid": "",
+            "question": "This is a test question.",
+            "correctAnswers": "1",
+            "answer": "Answer1,Answer2,Answer3,Answer4",
+            "questionGroup": ""
+        },
+        {
             "type": "TEACHER",
             "uuid": "25d2714e-d07a-4af2-bad1-5a0a72ecf11f",
             "name": "Mr. Hamann",
