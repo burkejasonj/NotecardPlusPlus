@@ -26,7 +26,7 @@ struct ContentView: View {
     @State private var showSheet: ActiveSheet? = nil
 
     @State private var selection = UUID()
-
+    
     var body: some View {
         NavigationView {
             List {
