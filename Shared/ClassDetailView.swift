@@ -35,7 +35,7 @@ struct ClassDetailView: View {
     }
 
     init(classInfo: Class?) {
-        self.accentColor = Color(hex: (classInfo?.color)!) ?? Color.accentColor
+        self.accentColor = Color(hex: classInfo?.color) ?? Color.accentColor
         self.title = classInfo?.name ?? "Unknown Class"
         self.level = classInfo?.level ?? ""
         self.teacher = classInfo?.teacher?.name ?? "Unknown Instructor"

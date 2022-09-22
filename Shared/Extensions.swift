@@ -84,7 +84,10 @@ extension View {
 }
 
 extension Color {
-    init?(hex: String) {
+    init?(hex optHex: String?) {
+        guard let hex = optHex else {
+            return nil;
+        }
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
         
