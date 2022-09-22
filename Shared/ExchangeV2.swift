@@ -2,6 +2,27 @@ import CoreData
 import Foundation
 import SwiftUI
 
+func ExchangeV2getClassbyUUID(
+    _ uuid: UUID,
+    _ viewContext: NSManagedObjectContext
+) -> Class? {
+    let thisClassFetchRequest = NSFetchRequest<Class>(
+        entityName: "Class"
+    )
+    thisClassFetchRequest.predicate = NSPredicate(
+        format: "uuid == %@",
+        argumentArray: [uuid]
+    )
+    
+    do {
+        let thisClass = try viewContext.fetch(thisClassFetchRequest)
+        
+        return thisClass.first
+    } catch {
+        fatalError("ERROR FETCHING DATA")
+    }
+}
+
 func ExchangeV2import(file json: Any?, viewContext: NSManagedObjectContext) {
     if let file = json as? [String: Any] {
         let version = file["version"] as? Int64
