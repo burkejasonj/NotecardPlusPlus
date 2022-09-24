@@ -25,15 +25,15 @@ struct ContentView: View {
 
     @State private var showSheet: ActiveSheet? = nil
 
-    @State private var selection = UUID()
+    @State private var selection: UUID?
     
     var body: some View {
-        NavigationView {
+        NavigationSplitView {
             List {
                 ForEach(Array(classes)) { thisClass in
-                    NavigationLink(
-                        destination: ClassDetailView(classInfo: thisClass)
-                    ) {
+                    Button {
+                        selection = thisClass.uuid
+                    } label: {
                         ClassRowView(classInfo: thisClass)
                             .padding(
                                 .vertical,
@@ -44,57 +44,116 @@ struct ContentView: View {
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
             }
-            .accentColor(.init(UIColor.secondarySystemFill))
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        UserDefaults.standard.set(false, forKey: "isPreloaded")
-                    } label: {
-                        Text("Fix All")
+            .listStyle(.sidebar)
+        } detail: {
+            if let classUUID = selection {
+                ClassDetailView(
+                    classInfo: ExchangeV2getClassbyUUID(
+                        classUUID,
+                        viewContext
+                    )
+                ).toolbar {
+                    ToolbarItemGroup {
+                        EditButton()
+                        
+                        Menu("Actions") {
+                            Button("Duplicate", action: {print("Duplicate")})
+                            Button("Rename", action: {print("Rename")})
+                            Button("Delete…", action: {print("Delete")})
+                            Menu("Copy") {
+                                Button("Copy", action: {print("Copy")})
+                                Button("Copy Formatted", action: {print("Copy Formatted")})
+                                Button("Copy Library Path", action: {print("Copy Library Path")})
+                            }
+                        }
+                        
+                        //                    Menu {
+                        //                        NavigationLink(value: "New Class") {
+                        //                            Text("New Class")
+                        //                        }
+                        //                        NavigationLink(value: "Import Class") {
+                        //                            Text("Import Class")
+                        //                        }
+                        //                    } label: {
+                        //                        Label("Layout Options", systemImage: "plus")
+                        //                            .labelStyle(.iconOnly)
+                        //                    }
                     }
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Menu {
-                        Button {
-                            showSheet = .classCreator
-                        } label: {
-                            Text("Create Class")
-                        }
-
-                        Button {
-                            showSheet = .classImporter
-                        } label: {
-                            Text("Import Class")
-                        }
-                    } label: {
-                        Image(systemName: "plus")
-                    }
-                    .menuStyle(.borderlessButton)
-                }
+            } else {
+                Text("No Class Selected")
+                    .font(.largeTitle)
+                    .foregroundColor(Color(UIColor.secondaryLabel))
             }
-            .sheet(item: $showSheet) { sheet in
-                switch sheet {
-                case .classCreator:
-                    ClassCreatorView()
-                case .classImporter:
-                    ClassImporterView()
-                }
-            }
-            .navigationTitle("Classes")
-
-            Text("No Class Selected")
-                .font(.largeTitle)
-                .foregroundColor(Color(UIColor.secondaryLabel))
-                .navigationTitle("Details")
         }
-        .ifCondition(userInterfaceIdiom != .phone, then: { nv in
-            nv.navigationViewStyle(.columns)
-        }, else: { nv in
-            nv.navigationViewStyle(.stack)
-        })
+//        NavigationView {
+//            List {
+//                ForEach(Array(classes)) { thisClass in
+//                    NavigationLink(
+//                        destination: ClassDetailView(classInfo: thisClass)
+//                    ) {
+//                        ClassRowView(classInfo: thisClass)
+//                            .padding(
+//                                .vertical,
+//                                userInterfaceIdiom == .mac ? 8 : 0
+//                            )
+//                    }
+//                }
+//                .onMove(perform: moveItem)
+//                .onDelete(perform: deleteItem)
+//            }
+//            .listStyle(.sidebar)
+//            .accentColor(.init(UIColor.secondarySystemFill))
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button {
+//                        UserDefaults.standard.set(false, forKey: "isPreloaded")
+//                    } label: {
+//                        Text("Fix All")
+//                    }
+//                }
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    Menu {
+//                        Button {
+//                            showSheet = .classCreator
+//                        } label: {
+//                            Text("Create Class")
+//                        }
+//
+//                        Button {
+//                            showSheet = .classImporter
+//                        } label: {
+//                            Text("Import Class")
+//                        }
+//                    } label: {
+//                        Image(systemName: "plus")
+//                    }
+//                    .menuStyle(.borderlessButton)
+//                }
+//            }
+//            .sheet(item: $showSheet) { sheet in
+//                switch sheet {
+//                case .classCreator:
+//                    ClassCreatorView()
+//                case .classImporter:
+//                    ClassImporterView()
+//                }
+//            }
+//            .navigationTitle("Classes")
+//
+//            Text("No Class Selected")
+//                .font(.largeTitle)
+//                .foregroundColor(Color(UIColor.secondaryLabel))
+//                .navigationTitle("Details")
+//        }
+//        .ifCondition(userInterfaceIdiom != .phone, then: { nv in
+//            nv.navigationViewStyle(.columns)
+//        }, else: { nv in
+//            nv.navigationViewStyle(.stack)
+//        })
     }
 
     private func moveItem(at source: IndexSet, to destination: Int) {
