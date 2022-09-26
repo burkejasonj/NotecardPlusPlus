@@ -35,29 +35,27 @@ struct ContentView: View {
                         selection = thisClass.uuid
                     } label: {
                         ClassRowView(classInfo: thisClass)
-//                            .padding(
-//                                .vertical,
-//                                userInterfaceIdiom == .mac ? 8 : 0
-//                            )
                     }
+#if os(macOS)
+                    .buttonStyle(listButtonStyle(tint: Color.accentColor))
+#endif
                 }
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
             }
             .listStyle(.sidebar)
             .toolbar {
-                ToolbarItemGroup {
+                ToolbarItemGroup(placement: .primaryAction) {
 #if os(macOS)
                     Button {
                         
                     } label: {
                         Text("Edit")
                     }
-                    
+                    .buttonStyle(.borderless)
 #else
                     EditButton()
 #endif
-                    
                     Menu {
                         NavigationLink(value: "New Class") {
                             Text("New Class")
@@ -69,8 +67,10 @@ struct ContentView: View {
                         Label("Layout Options", systemImage: "plus")
                             .labelStyle(.iconOnly)
                     }
+                    .menuStyle(.borderlessButton)
                 }
             }
+            .navigationSplitViewColumnWidth(ideal: 200.0)
         } detail: {
             if let classUUID = selection {
                 ClassDetailView(
