@@ -16,11 +16,11 @@ struct ClassDetailView: View {
         Gradient(colors: [accentColor, Color.clear])
     }
 
-    #if os(macOS)
+#if os(macOS)
     @State var isCompact = false
-    #else
+#else
     @State var isCompact = UIDevice.current.userInterfaceIdiom == .phone
-    #endif
+#endif
     
     init(
         accentColor: Color,
