@@ -19,7 +19,7 @@ struct ClassDetailView: View {
     #if os(macOS)
     @State var isCompact = false
     #else
-    @State var isCompact = UIDevice.current.horizontalSizeClass == .compact
+    @State var isCompact = UIDevice.current.userInterfaceIdiom == .phone
     #endif
     
     init(
