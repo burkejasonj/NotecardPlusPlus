@@ -1,5 +1,22 @@
 import SwiftUI
 
+struct listButtonStyle: ButtonStyle {
+    var tint: Color
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        withAnimation(.easeOut) {
+            configuration.label
+                .padding(.horizontal)
+                .padding(.vertical, 8)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .foregroundColor(tint)
+                        .opacity(configuration.isPressed == true ? 0.6 : 0)
+                )
+        }
+    }
+}
+
 struct ncButtonStyle: ButtonStyle {
     var foregroundColor: Color
     var tint: Color
