@@ -5,13 +5,13 @@ NotecardPlusPlus is a study tool designed to help students study for and underst
 ## Installation
 
 ### Requirements
-Developed using macOS 12.5.1 and Xcode 14.0 Beta 6
+Developed using macOS 13.0 Beta 8 and Xcode 14.1 Beta 2
 
-Compilation: Requires macOS 12.5.1 or later and Xcode 13.4.1 or later.
+Compilation: Requires macOS 13.0 or later and Xcode 14.1 or later.
 
-Desktop App: Requires macOS 12.5.1 or later.
+Desktop App: Requires macOS 13.0 or later.
 
-Mobile App: Requires iOS/iPadOS 15.5.1 or later.
+Mobile App: Requires iOS/iPadOS 16.0 or later.
 
 ### Builds
 See [Releases](https://github.com/burkejasonj/NotecardPlusPlus/releases)
