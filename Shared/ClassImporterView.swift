@@ -7,7 +7,7 @@ struct ClassImporterView: View {
         NavigationView {
             Text("ClassImporterView")
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem {
                         Button {
                             dismiss()
                         } label: {

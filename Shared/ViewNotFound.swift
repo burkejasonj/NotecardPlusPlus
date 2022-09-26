@@ -7,7 +7,7 @@ struct ViewNotFound: View {
         NavigationView {
             Text("I can't find the view you're looking for.")
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem {
                         Button {
                             dismiss()
                         } label: {

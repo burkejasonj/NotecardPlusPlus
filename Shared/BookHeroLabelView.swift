@@ -17,14 +17,14 @@ struct BookHeroLabelView: View {
                 Text(level)
                     .font(.title2)
             }
-            .foregroundColor(Color(UIColor.label))
+            .foregroundColor(Color.primary)
             Group {
                 Text(teacher)
                 Text("Provided by \(creator)")
                 Text(school)
             }
             .font(.title3)
-            .foregroundColor(Color(UIColor.secondaryLabel))
+            .foregroundColor(Color.secondary)
         }
     }
 }

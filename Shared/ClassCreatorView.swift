@@ -34,7 +34,9 @@ struct ClassCreatorView: View {
                         TextField("Year",
                                   text: $classYearInt.value,
                                   prompt: Text("Class Year"))
+#if os(iOS)
                             .keyboardType(.numberPad)
+#endif
                             .focused($focusState, equals: "year")
                         ColorPicker(selection: $classColor, supportsOpacity: false) {
                             Text("Class Color")

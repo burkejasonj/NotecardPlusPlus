@@ -65,12 +65,12 @@ struct ClassRowView: View {
                         .lineLimit(2)
                     Text(level)
                 }
-                .foregroundColor(Color(UIColor.label))
+                .foregroundColor(Color.primary)
                 Group {
                     Text(teacher)
                     Text("Provided by \(creator)")
                 }
-                .foregroundColor(Color(UIColor.secondaryLabel))
+                .foregroundColor(Color.secondary)
             }
             .lineLimit(1)
         }

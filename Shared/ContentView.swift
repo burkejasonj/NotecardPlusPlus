@@ -21,7 +21,7 @@ struct ContentView: View {
     )
     private var classes: FetchedResults<Class>
 
-    private let userInterfaceIdiom = UIDevice.current.userInterfaceIdiom
+    //private let userInterfaceIdiom = UIDevice.current.userInterfaceIdiom
 
     @State private var showSheet: ActiveSheet? = nil
 
@@ -35,16 +35,42 @@ struct ContentView: View {
                         selection = thisClass.uuid
                     } label: {
                         ClassRowView(classInfo: thisClass)
-                            .padding(
-                                .vertical,
-                                userInterfaceIdiom == .mac ? 8 : 0
-                            )
+//                            .padding(
+//                                .vertical,
+//                                userInterfaceIdiom == .mac ? 8 : 0
+//                            )
                     }
                 }
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
             }
             .listStyle(.sidebar)
+            .toolbar {
+                ToolbarItemGroup {
+#if os(macOS)
+                    Button {
+                        
+                    } label: {
+                        Text("Edit")
+                    }
+                    
+#else
+                    EditButton()
+#endif
+                    
+                    Menu {
+                        NavigationLink(value: "New Class") {
+                            Text("New Class")
+                        }
+                        NavigationLink(value: "Import Class") {
+                            Text("Import Class")
+                        }
+                    } label: {
+                        Label("Layout Options", systemImage: "plus")
+                            .labelStyle(.iconOnly)
+                    }
+                }
+            }
         } detail: {
             if let classUUID = selection {
                 ClassDetailView(
@@ -52,38 +78,11 @@ struct ContentView: View {
                         classUUID,
                         viewContext
                     )
-                ).toolbar {
-                    ToolbarItemGroup {
-                        EditButton()
-                        
-                        Menu("Actions") {
-                            Button("Duplicate", action: {print("Duplicate")})
-                            Button("Rename", action: {print("Rename")})
-                            Button("Delete…", action: {print("Delete")})
-                            Menu("Copy") {
-                                Button("Copy", action: {print("Copy")})
-                                Button("Copy Formatted", action: {print("Copy Formatted")})
-                                Button("Copy Library Path", action: {print("Copy Library Path")})
-                            }
-                        }
-                        
-                        //                    Menu {
-                        //                        NavigationLink(value: "New Class") {
-                        //                            Text("New Class")
-                        //                        }
-                        //                        NavigationLink(value: "Import Class") {
-                        //                            Text("Import Class")
-                        //                        }
-                        //                    } label: {
-                        //                        Label("Layout Options", systemImage: "plus")
-                        //                            .labelStyle(.iconOnly)
-                        //                    }
-                    }
-                }
+                )
             } else {
                 Text("No Class Selected")
                     .font(.largeTitle)
-                    .foregroundColor(Color(UIColor.secondaryLabel))
+                    .foregroundColor(Color.secondary)
             }
         }
 //        NavigationView {

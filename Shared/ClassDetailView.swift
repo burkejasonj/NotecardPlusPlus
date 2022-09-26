@@ -16,8 +16,12 @@ struct ClassDetailView: View {
         Gradient(colors: [accentColor, Color.clear])
     }
 
-    @Environment(\.horizontalSizeClass) var sizeClass
-
+    #if os(macOS)
+    @State var isCompact = false
+    #else
+    @State var isCompact = UIDevice.current.horizontalSizeClass == .compact
+    #endif
+    
     init(
         accentColor: Color,
         title: String,
@@ -45,7 +49,7 @@ struct ClassDetailView: View {
 
     var body: some View {
         GeometryReader { geo in
-            if sizeClass == .compact {
+            if isCompact == true {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading) {
                         BookHeroView(
@@ -91,16 +95,16 @@ struct ClassDetailView: View {
                         }
                     }
                 }
-                .padding(
-                    .horizontal,
-                    UIDevice.current.userInterfaceIdiom == .phone ? 48 : nil
-                )
+//                .padding(
+//                    .horizontal,
+//                    UIDevice.current.userInterfaceIdiom == .phone ? 48 : nil
+//                )
             }
         }
-        .padding(
-            .horizontal,
-            UIDevice.current.userInterfaceIdiom == .phone ? -48 : 0
-        )
+//        .padding(
+//            .horizontal,
+//            UIDevice.current.userInterfaceIdiom == .phone ? -48 : 0
+//        )
         .navigationTitle("Details")
     }
 }
