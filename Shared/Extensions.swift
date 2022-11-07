@@ -1,5 +1,18 @@
 import SwiftUI
 
+#if os(macOS)
+struct EditButton: View {
+    var body: some View {
+        Button {
+            
+        } label: {
+            Text("Edit")
+        }
+        .buttonStyle(.borderless)
+    }
+}
+#endif
+
 struct listButtonStyle: ButtonStyle {
     var tint: Color
     

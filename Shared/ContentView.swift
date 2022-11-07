@@ -46,16 +46,7 @@ struct ContentView: View {
             .listStyle(.sidebar)
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
-#if os(macOS)
-                    Button {
-                        
-                    } label: {
-                        Text("Edit")
-                    }
-                    .buttonStyle(.borderless)
-#else
                     EditButton()
-#endif
                     Menu {
                         NavigationLink(value: "New Class") {
                             Text("New Class")
