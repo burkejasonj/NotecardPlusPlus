@@ -79,7 +79,7 @@ struct ClassDetailView: View {
                 HStack(alignment: .top) {
                     BookHeroView(
                         accentColor: accentColor,
-                        size: min(geo.size.height, geo.size.width),
+                        size: min(geo.size.height, 400),
                         gradient: gradient
                     )
                     ScrollView {
