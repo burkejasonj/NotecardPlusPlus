@@ -66,7 +66,6 @@ struct ContentView: View {
                     ClassImporterView()
                 }
             }
-//            .navigationSplitViewColumnWidth(ideal: 200.0)
         } detail: {
             if let classUUID = selection {
                 ClassDetailView(
