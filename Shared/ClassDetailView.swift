@@ -55,8 +55,8 @@ struct ClassDetailView: View {
                         BookHeroView(
                             accentColor: accentColor,
                             size: min(
-                                geo.size.height - 144.3,
-                                geo.size.width
+                                geo.size.height,
+                                geo.size.width * 1.25
                             ),
                             gradient: gradient
                         )
@@ -70,16 +70,16 @@ struct ClassDetailView: View {
                         ChartExampleView(accentColor: accentColor)
                     }
                     .frame(width: min(
-                        geo.size.height - 144.3,
+                        geo.size.height,
                         geo.size.width
-                    ) * 0.75)
+                    ))
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
             } else {
                 HStack(alignment: .top) {
                     BookHeroView(
                         accentColor: accentColor,
-                        size: min(geo.size.height - 66.3, 400),
+                        size: min(geo.size.height, geo.size.width),
                         gradient: gradient
                     )
                     ScrollView {
@@ -95,16 +95,8 @@ struct ClassDetailView: View {
                         }
                     }
                 }
-//                .padding(
-//                    .horizontal,
-//                    UIDevice.current.userInterfaceIdiom == .phone ? 48 : nil
-//                )
             }
         }
-//        .padding(
-//            .horizontal,
-//            UIDevice.current.userInterfaceIdiom == .phone ? -48 : 0
-//        )
         .navigationTitle("Details")
     }
 }
