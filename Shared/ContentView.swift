@@ -21,8 +21,6 @@ struct ContentView: View {
     )
     private var classes: FetchedResults<Class>
 
-    //private let userInterfaceIdiom = UIDevice.current.userInterfaceIdiom
-
     @State private var showSheet: ActiveSheet? = nil
 
     @State private var selection: UUID?
@@ -80,74 +78,6 @@ struct ContentView: View {
                     .foregroundColor(Color.secondary)
             }
         }
-//        NavigationView {
-//            List {
-//                ForEach(Array(classes)) { thisClass in
-//                    NavigationLink(
-//                        destination: ClassDetailView(classInfo: thisClass)
-//                    ) {
-//                        ClassRowView(classInfo: thisClass)
-//                            .padding(
-//                                .vertical,
-//                                userInterfaceIdiom == .mac ? 8 : 0
-//                            )
-//                    }
-//                }
-//                .onMove(perform: moveItem)
-//                .onDelete(perform: deleteItem)
-//            }
-//            .listStyle(.sidebar)
-//            .accentColor(.init(UIColor.secondarySystemFill))
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarLeading) {
-//                    Button {
-//                        UserDefaults.standard.set(false, forKey: "isPreloaded")
-//                    } label: {
-//                        Text("Fix All")
-//                    }
-//                }
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    Menu {
-//                        Button {
-//                            showSheet = .classCreator
-//                        } label: {
-//                            Text("Create Class")
-//                        }
-//
-//                        Button {
-//                            showSheet = .classImporter
-//                        } label: {
-//                            Text("Import Class")
-//                        }
-//                    } label: {
-//                        Image(systemName: "plus")
-//                    }
-//                    .menuStyle(.borderlessButton)
-//                }
-//            }
-//            .sheet(item: $showSheet) { sheet in
-//                switch sheet {
-//                case .classCreator:
-//                    ClassCreatorView()
-//                case .classImporter:
-//                    ClassImporterView()
-//                }
-//            }
-//            .navigationTitle("Classes")
-//
-//            Text("No Class Selected")
-//                .font(.largeTitle)
-//                .foregroundColor(Color(UIColor.secondaryLabel))
-//                .navigationTitle("Details")
-//        }
-//        .ifCondition(userInterfaceIdiom != .phone, then: { nv in
-//            nv.navigationViewStyle(.columns)
-//        }, else: { nv in
-//            nv.navigationViewStyle(.stack)
-//        })
     }
 
     private func moveItem(at source: IndexSet, to destination: Int) {
