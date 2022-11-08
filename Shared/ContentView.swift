@@ -31,14 +31,11 @@ struct ContentView: View {
         NavigationSplitView {
             List {
                 ForEach(Array(classes)) { thisClass in
-                    Button {
-                        selection = thisClass.uuid
-                    } label: {
+                    NavigationLink(
+                        destination: ClassDetailView(classInfo: thisClass)
+                    ) {
                         ClassRowView(classInfo: thisClass)
                     }
-#if os(macOS)
-                    .buttonStyle(listButtonStyle(tint: Color.accentColor))
-#endif
                 }
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
