@@ -48,11 +48,11 @@ struct ContentView: View {
                 ToolbarItemGroup(placement: .primaryAction) {
                     EditButton()
                     Menu {
-                        NavigationLink(value: "New Class") {
-                            Text("New Class")
+                        Button("New Class") {
+                            showSheet = .classCreator
                         }
-                        NavigationLink(value: "Import Class") {
-                            Text("Import Class")
+                        Button("Import Class...") {
+                            showSheet = .classImporter
                         }
                     } label: {
                         Label("Layout Options", systemImage: "plus")
@@ -61,7 +61,15 @@ struct ContentView: View {
                     .menuStyle(.borderlessButton)
                 }
             }
-            .navigationSplitViewColumnWidth(ideal: 200.0)
+            .sheet(item: $showSheet) { sheetType in
+                switch sheetType {
+                case .classCreator:
+                    ClassCreatorView()
+                case .classImporter:
+                    ClassImporterView()
+                }
+            }
+//            .navigationSplitViewColumnWidth(ideal: 200.0)
         } detail: {
             if let classUUID = selection {
                 ClassDetailView(
