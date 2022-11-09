@@ -7,25 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B234542289662730081D8FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B234541289662730081D8FE /* ContentView.swift */; };
-		8B234545289667C90081D8FE /* ClassRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B234544289667C90081D8FE /* ClassRowView.swift */; };
-		8B2345472896680A0081D8FE /* BookCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2345462896680A0081D8FE /* BookCoverView.swift */; };
-		8B3030E928B21770005B42E8 /* ClassCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030E828B21770005B42E8 /* ClassCreatorView.swift */; };
-		8B3030EB28B21C08005B42E8 /* ClassImporterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */; };
-		8B3030ED28B21D38005B42E8 /* ViewNotFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */; };
 		8B35FB8928A852D100D019B5 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B164EB028A4CEE8009764AC /* TestData.json */; };
-		8BB0FC3828B56582007CC3DE /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB0FC3728B5657C007CC3DE /* StudyView.swift */; };
 		8BCD676A28627A0A00AE131F /* NotecardPlusPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */; };
-		8BCD676C28627A0A00AE131F /* NotecardPlusPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */; };
-		8BCD677028627A0A00AE131F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675B28627A0800AE131F /* Persistence.swift */; };
+		8BCD676C28627A0A00AE131F /* NotecardPlusPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675928627A0800AE131F /* NotecardPlusPlus.swift */; };
 		8BCD677228627A0A00AE131F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BCD675C28627A0A00AE131F /* Assets.xcassets */; };
-		8BD9ACBB2898FD9C00011938 /* ClassDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBA2898FD9C00011938 /* ClassDetailView.swift */; };
-		8BD9ACBD2898FDD700011938 /* BookHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBC2898FDD700011938 /* BookHeroView.swift */; };
-		8BD9ACBF2898FE0900011938 /* BookHeroLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */; };
-		8BD9ACC12898FE4200011938 /* ChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACC02898FE4200011938 /* ChartExampleView.swift */; };
 		8BDD642D28C2949100BA038B /* TestDataV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BDD642C28C2949100BA038B /* TestDataV2.json */; };
-		8BDD642F28C2D2B900BA038B /* ExchangeV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */; };
-		8BF4A69928628180004A01E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4A69828628180004A01E5 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +26,7 @@
 		8B79A8D528C074820053F7FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8BB0FC3728B5657C007CC3DE /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		8BCD675828627A0800AE131F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
-		8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotecardPlusPlusApp.swift; sourceTree = "<group>"; };
+		8BCD675928627A0800AE131F /* NotecardPlusPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotecardPlusPlus.swift; sourceTree = "<group>"; };
 		8BCD675B28627A0800AE131F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8BCD675C28627A0A00AE131F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BCD676128627A0A00AE131F /* Notecard++.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notecard++.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +109,7 @@
 		8BFFC4D3291B310A002E9222 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */,
+				8BCD675928627A0800AE131F /* NotecardPlusPlus.swift */,
 				8BFFC4D8291B367B002E9222 /* Web */,
 				8BFFC4D7291B3608002E9222 /* User Interface */,
 				8BFFC4D6291B358D002E9222 /* Extensions */,
@@ -254,22 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BF4A69928628180004A01E5 /* Extensions.swift in Sources */,
-				8B3030EB28B21C08005B42E8 /* ClassImporterView.swift in Sources */,
 				8BCD676A28627A0A00AE131F /* NotecardPlusPlus.xcdatamodeld in Sources */,
-				8BD9ACC12898FE4200011938 /* ChartExampleView.swift in Sources */,
-				8BB0FC3828B56582007CC3DE /* StudyView.swift in Sources */,
-				8B234542289662730081D8FE /* ContentView.swift in Sources */,
-				8BDD642F28C2D2B900BA038B /* ExchangeV2.swift in Sources */,
-				8B2345472896680A0081D8FE /* BookCoverView.swift in Sources */,
-				8BCD677028627A0A00AE131F /* Persistence.swift in Sources */,
-				8B234545289667C90081D8FE /* ClassRowView.swift in Sources */,
-				8BD9ACBF2898FE0900011938 /* BookHeroLabelView.swift in Sources */,
-				8BD9ACBB2898FD9C00011938 /* ClassDetailView.swift in Sources */,
-				8BCD676C28627A0A00AE131F /* NotecardPlusPlusApp.swift in Sources */,
-				8B3030E928B21770005B42E8 /* ClassCreatorView.swift in Sources */,
-				8BD9ACBD2898FDD700011938 /* BookHeroView.swift in Sources */,
-				8B3030ED28B21D38005B42E8 /* ViewNotFound.swift in Sources */,
+				8BCD676C28627A0A00AE131F /* NotecardPlusPlus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
