@@ -1,15 +1,12 @@
-//
-//  ContentView.swift
-//  NotecardPlusPlus
-//
-//  Created by Jason Burke on 11/8/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationSplitView {
+            Text("Content")
+        } detail: {
+            Text("Detail")
+        }
     }
 }
 

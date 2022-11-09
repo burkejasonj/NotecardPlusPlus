@@ -13,6 +13,16 @@
 		8BCD677228627A0A00AE131F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BCD675C28627A0A00AE131F /* Assets.xcassets */; };
 		8BDD642D28C2949100BA038B /* TestDataV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BDD642C28C2949100BA038B /* TestDataV2.json */; };
 		8BFFC4DB291B3A99002E9222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFFC4DA291B3A99002E9222 /* ContentView.swift */; };
+		8BFFC4DC291B3CBD002E9222 /* BookHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBC2898FDD700011938 /* BookHeroView.swift */; };
+		8BFFC4DD291B3CBD002E9222 /* BookHeroLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */; };
+		8BFFC4DE291B3CBD002E9222 /* BookCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2345462896680A0081D8FE /* BookCoverView.swift */; };
+		8BFFC4DF291B3D35002E9222 /* ClassRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B234544289667C90081D8FE /* ClassRowView.swift */; };
+		8BFFC4E0291B3D35002E9222 /* ClassDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACBA2898FD9C00011938 /* ClassDetailView.swift */; };
+		8BFFC4E1291B3D35002E9222 /* ClassCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030E828B21770005B42E8 /* ClassCreatorView.swift */; };
+		8BFFC4E2291B3D35002E9222 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB0FC3728B5657C007CC3DE /* StudyView.swift */; };
+		8BFFC4E3291B3D35002E9222 /* ClassImporterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */; };
+		8BFFC4E4291B3D35002E9222 /* ViewNotFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */; };
+		8BFFC4E5291B3D35002E9222 /* ChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACC02898FE4200011938 /* ChartExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +69,6 @@
 			children = (
 				8B79A8D528C074820053F7FA /* README.md */,
 				8B79A8D328C074820053F7FA /* LICENSE.md */,
-				8BFFC4D1291B2F84002E9222 /* Old Files */,
 				8BFFC4D3291B310A002E9222 /* Source */,
 				8BFFC4D2291B30FC002E9222 /* Assets */,
 				8BCD676228627A0A00AE131F /* Products */,
@@ -72,27 +81,6 @@
 				8BCD676128627A0A00AE131F /* Notecard++.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8BFFC4D1291B2F84002E9222 /* Old Files */ = {
-			isa = PBXGroup;
-			children = (
-				8B2345462896680A0081D8FE /* BookCoverView.swift */,
-				8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */,
-				8BD9ACBC2898FDD700011938 /* BookHeroView.swift */,
-				8BD9ACC02898FE4200011938 /* ChartExampleView.swift */,
-				8B3030E828B21770005B42E8 /* ClassCreatorView.swift */,
-				8BD9ACBA2898FD9C00011938 /* ClassDetailView.swift */,
-				8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */,
-				8B234544289667C90081D8FE /* ClassRowView.swift */,
-				8B234541289662730081D8FE /* ContentView.swift */,
-				8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */,
-				8BF4A69828628180004A01E5 /* Extensions.swift */,
-				8BCD675B28627A0800AE131F /* Persistence.swift */,
-				8BB0FC3728B5657C007CC3DE /* StudyView.swift */,
-				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
-			);
-			path = "Old Files";
 			sourceTree = "<group>";
 		};
 		8BFFC4D2291B30FC002E9222 /* Assets */ = {
@@ -112,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8BCD675928627A0800AE131F /* NotecardPlusPlus.swift */,
+				8BFFC4E7291B3D49002E9222 /* Old Files */,
 				8BFFC4D8291B367B002E9222 /* Web */,
 				8BFFC4D7291B3608002E9222 /* User Interface */,
 				8BFFC4D6291B358D002E9222 /* Extensions */,
@@ -130,6 +119,9 @@
 		8BFFC4D6291B358D002E9222 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8BCD675B28627A0800AE131F /* Persistence.swift */,
+				8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */,
+				8BF4A69828628180004A01E5 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -137,6 +129,16 @@
 		8BFFC4D7291B3608002E9222 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				8BD9ACC02898FE4200011938 /* ChartExampleView.swift */,
+				8B3030E828B21770005B42E8 /* ClassCreatorView.swift */,
+				8BD9ACBA2898FD9C00011938 /* ClassDetailView.swift */,
+				8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */,
+				8B234544289667C90081D8FE /* ClassRowView.swift */,
+				8BB0FC3728B5657C007CC3DE /* StudyView.swift */,
+				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
+				8B2345462896680A0081D8FE /* BookCoverView.swift */,
+				8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */,
+				8BD9ACBC2898FDD700011938 /* BookHeroView.swift */,
 				8BFFC4DA291B3A99002E9222 /* ContentView.swift */,
 			);
 			path = "User Interface";
@@ -147,6 +149,14 @@
 			children = (
 			);
 			path = Web;
+			sourceTree = "<group>";
+		};
+		8BFFC4E7291B3D49002E9222 /* Old Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B234541289662730081D8FE /* ContentView.swift */,
+			);
+			path = "Old Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +254,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BCD676A28627A0A00AE131F /* NotecardPlusPlus.xcdatamodeld in Sources */,
+				8BFFC4E4291B3D35002E9222 /* ViewNotFound.swift in Sources */,
+				8BFFC4E1291B3D35002E9222 /* ClassCreatorView.swift in Sources */,
+				8BFFC4DC291B3CBD002E9222 /* BookHeroView.swift in Sources */,
+				8BFFC4DD291B3CBD002E9222 /* BookHeroLabelView.swift in Sources */,
+				8BFFC4E3291B3D35002E9222 /* ClassImporterView.swift in Sources */,
+				8BFFC4E2291B3D35002E9222 /* StudyView.swift in Sources */,
+				8BFFC4DE291B3CBD002E9222 /* BookCoverView.swift in Sources */,
+				8BFFC4E5291B3D35002E9222 /* ChartExampleView.swift in Sources */,
+				8BFFC4E0291B3D35002E9222 /* ClassDetailView.swift in Sources */,
+				8BFFC4DF291B3D35002E9222 /* ClassRowView.swift in Sources */,
 				8BCD676C28627A0A00AE131F /* NotecardPlusPlus.swift in Sources */,
 				8BFFC4DB291B3A99002E9222 /* ContentView.swift in Sources */,
 			);
