@@ -12,6 +12,7 @@
 		8BCD676C28627A0A00AE131F /* NotecardPlusPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675928627A0800AE131F /* NotecardPlusPlus.swift */; };
 		8BCD677228627A0A00AE131F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BCD675C28627A0A00AE131F /* Assets.xcassets */; };
 		8BDD642D28C2949100BA038B /* TestDataV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BDD642C28C2949100BA038B /* TestDataV2.json */; };
+		8BFFC4DB291B3A99002E9222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFFC4DA291B3A99002E9222 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		8BEB778A286D3E6E00E0BE43 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		8BF4A69828628180004A01E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8BFFC4D9291B3704002E9222 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		8BFFC4DA291B3A99002E9222 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		8BFFC4D7291B3608002E9222 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				8BFFC4DA291B3A99002E9222 /* ContentView.swift */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				8BCD676A28627A0A00AE131F /* NotecardPlusPlus.xcdatamodeld in Sources */,
 				8BCD676C28627A0A00AE131F /* NotecardPlusPlus.swift in Sources */,
+				8BFFC4DB291B3A99002E9222 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
