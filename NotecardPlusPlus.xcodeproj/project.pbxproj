@@ -37,7 +37,6 @@
 		8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassImporterView.swift; sourceTree = "<group>"; };
 		8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotFound.swift; sourceTree = "<group>"; };
 		8B79A8D328C074820053F7FA /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		8B79A8D428C074820053F7FA /* macOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = macOS; sourceTree = "<group>"; };
 		8B79A8D528C074820053F7FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8BB0FC3728B5657C007CC3DE /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		8BCD675828627A0800AE131F /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeV2.swift; sourceTree = "<group>"; };
 		8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NotecardPlusPlus (iOS).entitlements"; sourceTree = "<group>"; };
 		8BF4A69828628180004A01E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8BFFC4D9291B3704002E9222 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,21 +71,11 @@
 			children = (
 				8B79A8D528C074820053F7FA /* README.md */,
 				8B79A8D328C074820053F7FA /* LICENSE.md */,
-				8BCD675628627A0800AE131F /* Shared */,
-				8B79A8D428C074820053F7FA /* macOS */,
-				8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */,
-				8BCD676228627A0A00AE131F /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		8BCD675628627A0800AE131F /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				8BFFC4D1291B2F84002E9222 /* Old */,
+				8BFFC4D1291B2F84002E9222 /* Old Files */,
 				8BFFC4D3291B310A002E9222 /* Source */,
 				8BFFC4D2291B30FC002E9222 /* Assets */,
+				8BCD676228627A0A00AE131F /* Products */,
 			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		8BCD676228627A0A00AE131F /* Products */ = {
@@ -96,7 +86,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8BFFC4D1291B2F84002E9222 /* Old */ = {
+		8BFFC4D1291B2F84002E9222 /* Old Files */ = {
 			isa = PBXGroup;
 			children = (
 				8B2345462896680A0081D8FE /* BookCoverView.swift */,
@@ -115,12 +105,14 @@
 				8BB0FC3728B5657C007CC3DE /* StudyView.swift */,
 				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
 			);
-			path = Old;
+			path = "Old Files";
 			sourceTree = "<group>";
 		};
 		8BFFC4D2291B30FC002E9222 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */,
+				8BFFC4D9291B3704002E9222 /* macOS.entitlements */,
 				8B164EB028A4CEE8009764AC /* TestData.json */,
 				8BDD642C28C2949100BA038B /* TestDataV2.json */,
 				8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */,
@@ -132,8 +124,40 @@
 		8BFFC4D3291B310A002E9222 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8BFFC4D8291B367B002E9222 /* Web */,
+				8BFFC4D7291B3608002E9222 /* User Interface */,
+				8BFFC4D6291B358D002E9222 /* Extensions */,
+				8BFFC4D5291B3572002E9222 /* Core */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		8BFFC4D5291B3572002E9222 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8BFFC4D6291B358D002E9222 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8BFFC4D7291B3608002E9222 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		8BFFC4D8291B367B002E9222 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
