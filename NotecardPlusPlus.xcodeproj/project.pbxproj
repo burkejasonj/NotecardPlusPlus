@@ -23,6 +23,9 @@
 		8BFFC4E3291B3D35002E9222 /* ClassImporterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030EA28B21C08005B42E8 /* ClassImporterView.swift */; };
 		8BFFC4E4291B3D35002E9222 /* ViewNotFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */; };
 		8BFFC4E5291B3D35002E9222 /* ChartExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD9ACC02898FE4200011938 /* ChartExampleView.swift */; };
+		8BFFC4E8291B3ED5002E9222 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675B28627A0800AE131F /* Persistence.swift */; };
+		8BFFC4E9291B3ED5002E9222 /* ExchangeV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */; };
+		8BFFC4EA291B3ED5002E9222 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4A69828628180004A01E5 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -253,6 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFFC4E8291B3ED5002E9222 /* Persistence.swift in Sources */,
+				8BFFC4E9291B3ED5002E9222 /* ExchangeV2.swift in Sources */,
+				8BFFC4EA291B3ED5002E9222 /* Extensions.swift in Sources */,
 				8BCD676A28627A0A00AE131F /* NotecardPlusPlus.xcdatamodeld in Sources */,
 				8BFFC4E4291B3D35002E9222 /* ViewNotFound.swift in Sources */,
 				8BFFC4E1291B3D35002E9222 /* ClassCreatorView.swift in Sources */,
