@@ -50,7 +50,7 @@
 		8BD9ACC02898FE4200011938 /* ChartExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartExampleView.swift; sourceTree = "<group>"; };
 		8BDD642C28C2949100BA038B /* TestDataV2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestDataV2.json; sourceTree = "<group>"; };
 		8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeV2.swift; sourceTree = "<group>"; };
-		8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NotecardPlusPlus (iOS).entitlements"; sourceTree = "<group>"; };
+		8BEB778A286D3E6E00E0BE43 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		8BF4A69828628180004A01E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8BFFC4D9291B3704002E9222 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +111,7 @@
 		8BFFC4D2291B30FC002E9222 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				8BEB778A286D3E6E00E0BE43 /* NotecardPlusPlus (iOS).entitlements */,
+				8BEB778A286D3E6E00E0BE43 /* iOS.entitlements */,
 				8BFFC4D9291B3704002E9222 /* macOS.entitlements */,
 				8B164EB028A4CEE8009764AC /* TestData.json */,
 				8BDD642C28C2949100BA038B /* TestDataV2.json */,
