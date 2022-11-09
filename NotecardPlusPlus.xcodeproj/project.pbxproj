@@ -100,7 +100,6 @@
 				8B234541289662730081D8FE /* ContentView.swift */,
 				8BDD642E28C2D2B900BA038B /* ExchangeV2.swift */,
 				8BF4A69828628180004A01E5 /* Extensions.swift */,
-				8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */,
 				8BCD675B28627A0800AE131F /* Persistence.swift */,
 				8BB0FC3728B5657C007CC3DE /* StudyView.swift */,
 				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
@@ -124,6 +123,7 @@
 		8BFFC4D3291B310A002E9222 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8BCD675928627A0800AE131F /* NotecardPlusPlusApp.swift */,
 				8BFFC4D8291B367B002E9222 /* Web */,
 				8BFFC4D7291B3608002E9222 /* User Interface */,
 				8BFFC4D6291B358D002E9222 /* Extensions */,
