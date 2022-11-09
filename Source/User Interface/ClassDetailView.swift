@@ -79,7 +79,7 @@ struct ClassDetailView: View {
                 HStack(alignment: .top) {
                     BookHeroView(
                         accentColor: accentColor,
-                        size: min(geo.size.height, 400),
+                        size: min(geo.size.height - 48, 400),
                         gradient: gradient
                     )
                     ScrollView {
@@ -97,7 +97,14 @@ struct ClassDetailView: View {
                 }
             }
         }
-        .navigationTitle("Details")
+#if os(macOS)
+        .padding()
+#endif
+        .toolbar {
+            ToolbarItem {
+                EditButton()
+            }
+        }
     }
 }
 
