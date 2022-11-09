@@ -78,12 +78,3 @@ struct ChartExampleView: View {
         }
     }
 }
-
-struct ChartExampleView_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            ChartExampleView()
-        }
-        .frame(width: 500, height: 800)
-    }
-}
