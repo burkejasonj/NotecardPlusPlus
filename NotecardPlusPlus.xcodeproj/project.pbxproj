@@ -69,7 +69,6 @@
 			children = (
 				8B79A8D528C074820053F7FA /* README.md */,
 				8B79A8D328C074820053F7FA /* LICENSE.md */,
-				8BFFC4E7291B3D49002E9222 /* Old Files */,
 				8BFFC4D3291B310A002E9222 /* Source */,
 				8BFFC4D2291B30FC002E9222 /* Assets */,
 				8BCD676228627A0A00AE131F /* Products */,
@@ -101,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8BCD675928627A0800AE131F /* NotecardPlusPlus.swift */,
+				8BFFC4E7291B3D49002E9222 /* Old Files */,
 				8BFFC4D8291B367B002E9222 /* Web */,
 				8BFFC4D7291B3608002E9222 /* User Interface */,
 				8BFFC4D6291B358D002E9222 /* Extensions */,
@@ -156,8 +156,7 @@
 			children = (
 				8B234541289662730081D8FE /* ContentView.swift */,
 			);
-			name = "Old Files";
-			path = "Source/Old Files";
+			path = "Old Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
