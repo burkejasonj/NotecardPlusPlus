@@ -8,17 +8,14 @@ struct BookCoverView: View {
     var body: some View {
         ZStack(alignment: .leading) {
             Rectangle()
-                .fill(Material.thin)
-                .background(
-                    LinearGradient(
-                        gradient: gradient,
-                        startPoint: UnitPoint(x: 0, y: 0),
-                        endPoint: UnitPoint(x: 2, y: 0)
-                    )
-                    .saturation(1.25)
+                .fill(
+                    accentColor.gradient
+                        .opacity(0.5)
                 )
             Rectangle()
-                .fill(accentColor)
+                .fill(
+                    accentColor.gradient
+                )
                 .frame(width: 10 * scale)
         }
         .frame(width: 75 * scale, height: 100 * scale)
