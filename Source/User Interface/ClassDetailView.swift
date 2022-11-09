@@ -56,7 +56,7 @@ struct ClassDetailView: View {
                             accentColor: accentColor,
                             size: min(
                                 geo.size.height,
-                                geo.size.width * 1.25
+                                geo.size.width * 4 / 3
                             ),
                             gradient: gradient
                         )
@@ -79,7 +79,7 @@ struct ClassDetailView: View {
                 HStack(alignment: .top) {
                     BookHeroView(
                         accentColor: accentColor,
-                        size: min(geo.size.height - 48, 400),
+                        size: min(geo.size.height, 400),
                         gradient: gradient
                     )
                     ScrollView {
@@ -97,9 +97,7 @@ struct ClassDetailView: View {
                 }
             }
         }
-#if os(macOS)
-        .padding()
-#endif
+        .padding(.horizontal)
         .toolbar {
             ToolbarItem {
                 EditButton()
