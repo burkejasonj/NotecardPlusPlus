@@ -17,7 +17,7 @@ struct ClassRowView: View {
     init() {
         self.accentColor = Color("248ace")
         self.title = "Unknown Class"
-        self.level = ""
+        self.level = "Elective"
         
         self.teacher = "Unknown Instructor"
         self.creator = "Unknown Provider"
