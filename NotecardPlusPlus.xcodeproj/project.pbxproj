@@ -81,8 +81,24 @@
 		8BCD675628627A0800AE131F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				8B164EB028A4CEE8009764AC /* TestData.json */,
-				8BDD642C28C2949100BA038B /* TestDataV2.json */,
+				8BFFC4D1291B2F84002E9222 /* Old */,
+				8BFFC4D3291B310A002E9222 /* Source */,
+				8BFFC4D2291B30FC002E9222 /* Assets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8BCD676228627A0A00AE131F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BCD676128627A0A00AE131F /* Notecard++.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BFFC4D1291B2F84002E9222 /* Old */ = {
+			isa = PBXGroup;
+			children = (
 				8B2345462896680A0081D8FE /* BookCoverView.swift */,
 				8BD9ACBE2898FE0900011938 /* BookHeroLabelView.swift */,
 				8BD9ACBC2898FDD700011938 /* BookHeroView.swift */,
@@ -98,18 +114,26 @@
 				8BCD675B28627A0800AE131F /* Persistence.swift */,
 				8BB0FC3728B5657C007CC3DE /* StudyView.swift */,
 				8B3030EC28B21D38005B42E8 /* ViewNotFound.swift */,
-				8BCD675C28627A0A00AE131F /* Assets.xcassets */,
-				8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */,
 			);
-			path = Shared;
+			path = Old;
 			sourceTree = "<group>";
 		};
-		8BCD676228627A0A00AE131F /* Products */ = {
+		8BFFC4D2291B30FC002E9222 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				8BCD676128627A0A00AE131F /* Notecard++.app */,
+				8B164EB028A4CEE8009764AC /* TestData.json */,
+				8BDD642C28C2949100BA038B /* TestDataV2.json */,
+				8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */,
+				8BCD675C28627A0A00AE131F /* Assets.xcassets */,
 			);
-			name = Products;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8BFFC4D3291B310A002E9222 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
