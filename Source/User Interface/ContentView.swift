@@ -23,20 +23,21 @@ struct ContentView: View {
     
     @State private var showSheet: ActiveSheet? = nil
     
-    @State private var selection: UUID?
-    
     var body: some View {
         NavigationSplitView {
             List {
                 ForEach(Array(classes)) { thisClass in
-                    NavigationLink(
-                        destination: ClassDetailView(classInfo: thisClass)
-                    ) {
+                    NavigationLink(value: thisClass) {
                         ClassRowView(classInfo: thisClass)
                     }
+                    .listRowBackground(Color.white)
+                    .buttonStyle(.plain)
                 }
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
+            }
+            .navigationDestination(for: Class.self) { thisClass in
+                ClassDetailView(classInfo: thisClass)
             }
             .listStyle(.sidebar)
             .toolbar {
