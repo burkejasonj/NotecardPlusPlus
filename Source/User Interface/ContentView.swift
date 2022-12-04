@@ -25,10 +25,6 @@ struct ContentView: View {
     
     @State private var selection: Class?
     
-    init() {
-        UICollectionView.appearance().allowsSelection = false
-    }
-    
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
