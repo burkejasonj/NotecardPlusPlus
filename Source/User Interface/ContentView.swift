@@ -23,21 +23,22 @@ struct ContentView: View {
     
     @State private var showSheet: ActiveSheet? = nil
     
+    @State private var selection: Class?
+    
+    init() {
+        UICollectionView.appearance().allowsSelection = false
+    }
+    
     var body: some View {
         NavigationSplitView {
-            List {
+            List(selection: $selection) {
                 ForEach(Array(classes)) { thisClass in
                     NavigationLink(value: thisClass) {
                         ClassRowView(classInfo: thisClass)
                     }
-                    .listRowBackground(Color.white)
-                    .buttonStyle(.plain)
                 }
                 .onMove(perform: moveItem)
                 .onDelete(perform: deleteItem)
-            }
-            .navigationDestination(for: Class.self) { thisClass in
-                ClassDetailView(classInfo: thisClass)
             }
             .listStyle(.sidebar)
             .toolbar {
@@ -65,9 +66,13 @@ struct ContentView: View {
                 }
             }
         } detail: {
-            Text("No Class Selected")
-                .font(.largeTitle)
-                .foregroundColor(Color.secondary)
+            if let thisClass = selection {
+                ClassDetailView(classInfo: thisClass)
+            } else {
+                Text("No Class Selected")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.secondary)
+            }
         }
     }
     
