@@ -1,6 +1,7 @@
 import SwiftUI
 
 #if os(macOS)
+
 struct EditButton: View {
     var body: some View {
         Button {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B13EE1D293C509D00A7700A /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 8B13EE1C293C509D00A7700A /* Introspect */; };
 		8B35FB8928A852D100D019B5 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B164EB028A4CEE8009764AC /* TestData.json */; };
 		8BCD676A28627A0A00AE131F /* NotecardPlusPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */; };
 		8BCD676C28627A0A00AE131F /* NotecardPlusPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD675928627A0800AE131F /* NotecardPlusPlus.swift */; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B13EE1D293C509D00A7700A /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +181,9 @@
 			dependencies = (
 			);
 			name = NotecardPlusPlus;
+			packageProductDependencies = (
+				8B13EE1C293C509D00A7700A /* Introspect */,
+			);
 			productName = "NotecardPlusPlus (iOS)";
 			productReference = 8BCD676128627A0A00AE131F /* Notecard++.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +212,9 @@
 				Base,
 			);
 			mainGroup = 8BCD675128627A0800AE131F;
+			packageReferences = (
+				8B13EE1B293C509D00A7700A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 8BCD676228627A0A00AE131F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -420,7 +428,7 @@
 				PRODUCT_NAME = "Notecard++";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -457,7 +465,7 @@
 				PRODUCT_NAME = "Notecard++";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -488,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B13EE1B293C509D00A7700A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B13EE1C293C509D00A7700A /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B13EE1B293C509D00A7700A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8BCD675728627A0800AE131F /* NotecardPlusPlus.xcdatamodeld */ = {

@@ -1,5 +1,6 @@
 import SwiftUI
 import Foundation
+import Introspect
 
 enum ActiveSheet: Identifiable {
     case classCreator, classImporter
@@ -24,6 +25,12 @@ struct ContentView: View {
     @State private var showSheet: ActiveSheet? = nil
     
     @State private var selection: Class?
+    
+    init() {
+#if os(iOS)
+        UICollectionView.appearance().tintColor = .systemBackground
+#endif
+    }
     
     var body: some View {
         NavigationSplitView {
